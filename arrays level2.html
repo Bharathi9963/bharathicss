@@ -1,0 +1,457 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            //1
+            var a=[23,34,54,10,4,7]
+            for(i=0;i<a.length;i++){
+                for(j=i+1;j<a.length;j++){
+                    if(a[i]>a[j]){
+
+                    var r=a[i]
+                    a[i]=a[j]
+                    a[j]=r
+                    }
+                   
+                }
+            }
+                console.log(a[a.length-6])
+            //2
+            var a=[23,34,54,10,4,7]
+            for(i=0;i<a.length;i++){
+                for(j=i+1;j<a.length;j++){
+                    if(a[i]<a[j]){
+
+                    var r=a[i]
+                    a[i]=a[j]
+                    a[j]=r
+                    }
+                   
+                }
+            }
+                console.log(a[a.length-6])
+            //3
+            var a=[23,34,54,10,4,7]
+            sum=0;
+            for(i=0;i<a.length;i++){
+                sum=sum+a[i]
+
+            }
+            console.log(sum)
+            //4
+            var a=[23,34,54,10,4,7]
+            sum=0;
+            for(i=0;i<a.length;i++){
+                sum=sum+a[i]
+
+            }
+            var avg=sum/a.length
+            console.log(avg)
+            //5
+           /* var a=[23,34,54,10,4,7]
+            b=prompt()
+           for(i=0;i<a.length;i++){
+            if(b == a[i]){
+                console.log("true")
+            }
+            else{
+                console.log('false')
+            }
+           }*/
+           //6
+          /* var a=[23,34,54,10,34,7,23,10,34] 
+           b=prompt()
+           count=0;
+           for(i=0;i<a.length;i++){
+            if(b==a[i]){
+                count++;
+                
+            }
+           }
+           
+           console.log(count)*/
+           //7
+           /*var ar=[23,34,54,10,4,7]
+            var b=+prompt()
+           console.log(ar.indexOf(b))*/
+           //8
+           var ar=[23,34,54,10,4,7]
+           var br=[];
+           br=ar;
+           console.log(br)
+           //9
+           var ar=[23,34,54,10,4,7]
+           for(i=0;i<ar.length;i++){
+            for(j=i+1;j<ar.length;j++){
+                if(ar[i]>ar[j]){
+                    ab=ar[i]
+                    ar[i]=ar[j]
+                    ar[j]=ab
+                }
+            }
+           }
+           for(i=0;i<ar.length-1;i++){
+            console.log(ar[i])
+           }
+           //10
+           var ar=[23,34,54,10,4,7]
+           var br=[]
+    
+           for(i=0;i<ar.length-1;i++){
+             if(ar[i]%2==0){
+                br[i]=ar[i]
+             }
+           }
+           console.log(br)
+           //11
+           var ar=[23,34,54,10,4,7]
+    
+           for(i=0;i<ar.length-1;i++){
+            if(i**i==ar){
+                
+            }
+           }
+           //foreach method
+           //1
+           var ab=[23,34,54,10,4,7]
+           min=+Infinity
+           max=-Infinity
+            ab.forEach(function(a){
+                if(a<min){
+                    min=a;
+                    
+                }
+            })
+            console.log(min);
+            //2
+            var ab=[23,34,54,10,4,7]
+           min=+Infinity
+           max=-Infinity
+            ab.forEach(function(a){
+                if(a>max){
+                    max=a;
+                    
+                }
+            })
+            console.log(max);
+            //3
+            var ab=[23,34,54,10,4,7]
+            var sum=0;
+            ab.forEach(function(a){
+                sum=sum+a;  
+            })
+            console.log(sum);
+            //4
+            var ab=[23,34,54,10,4,7]
+            var avg;
+            var sum=0;
+            ab.forEach(function(a){
+                sum=sum+a;  
+            })
+            avg=sum/ab.length
+            console.log(avg);
+            //5
+            /*var ab=[23,34,54,10,4,7]
+            count=0;
+            b=+prompt()
+            ab.forEach(function(value){
+                if(b==value){
+                    count++;
+                }
+                
+            })
+            if(count>0){
+                console.log('true')
+            }
+            else{
+                console.log('false')
+            }
+            
+            //6
+            var ab=[23,34,54,10,34,7,23,10,34]
+            b=+prompt()
+            count=0;
+            ab.forEach(function(a){
+                if(b==a){
+                    count++;
+                }
+            })
+            if(count>0){
+
+               console.log(count)
+            }
+            //7
+            var ab=[23,34,54,10,4,7]
+            c=+prompt()
+            ab.forEach(function(value,index){
+                console.log(ab.indexOf(c))
+
+            })*/
+           
+            //8
+            var ab=[23,34,54,10,4,7]
+            var ba=[]
+            ab.forEach(function(value,index){
+            ba=ab;
+            })
+            console.log(ba)
+            //9
+            var ar=[23,34,54,10,4,7]
+           ar.sort(function(a,b){
+            if(a<b){
+                return -1;
+            }
+            if(b<a){
+                return 1
+            }
+            return 0;
+
+           })
+           console.log(ar)
+           //10
+           var ab=[23,34,54,10,4,7]
+           var br=[]
+            ab.forEach(function(a){
+                if(a%2==0){
+                    br=a;
+                    console.log(br);
+                }
+               
+            })
+            //11
+           /* a=+prompt()
+             for(i=1;i*i!==a;i++){
+
+             }
+             console.log('perfect')*/
+             //map method
+              //1
+           var ab=[23,34,54,10,4,7]
+           min=+Infinity
+           max=-Infinity
+           ab.map(function(a){
+                if(a<min){
+                    min=a; 
+                }
+                
+            }) 
+            console.log(min);
+            //2
+            var ab=[23,34,54,10,4,7]
+           min=+Infinity
+           max=-Infinity
+            ab.forEach(function(a){
+                if(a>max){
+                    max=a;
+                    
+                }
+            })
+            console.log(max);
+            //3
+            var ab=[23,34,54,10,4,7]
+            var sum=0;
+            ab.map(function(a){
+                sum=sum+a;  
+                return sum;
+            })
+            console.log(sum);
+            //4
+            var ab=[23,34,54,10,4,7]
+            var avg;
+            var sum=0;
+            ab.map(function(a){
+                sum=sum+a;  
+            })
+            avg=sum/ab.length
+            console.log(avg);
+            //5
+            /*var ab=[23,34,54,10,4,7]
+            count=0;
+            b=+prompt()
+            ab.map(function(value){
+                if(b==value){
+                    count++;
+                }
+                
+            })
+            if(count>0){
+                console.log('true')
+            }
+            else{
+                console.log('false')
+            }
+            
+            //6
+            var ab=[23,34,54,10,34,7,23,10,34]
+            b=+prompt()
+            count=0;
+            ab.map(function(a){
+                if(b==a){
+                    count++;
+                }
+            })
+            if(count>0){
+
+               console.log(count)
+            }
+            //7
+            var ab=[23,34,54,10,4,7]
+            c=+prompt()
+            ab.map(function(value,index){
+                console.log(ab.indexOf(c))
+
+            })*/
+           
+            //8
+            var ab=[23,34,54,10,4,7]
+            var ba=[]
+            ab.map(function(value,index){
+                ba=ab;
+            })
+            console.log(ba)
+            //9
+            var ar=[23,34,54,10,4,7]
+           ar.sort(function(a,b){
+            if(a<b){
+                return -1;
+            }
+            if(b<a){
+                return 1
+            }
+            return 0;
+
+           })
+           console.log(ar)
+           //10
+           var ab=[23,34,54,10,4,7]
+           var br=[]
+           var b= ab.map(function(a){
+                if(a%2==0){
+                    br=a;
+                    return a;
+                   
+                }
+               
+            })
+            console.log(b);
+            //11
+           /* a=+prompt()
+             for(i=1;i*i!==a;i++){
+
+             }
+             console.log('perfect')*/
+            //reduce method
+            //1
+            //1
+           var ab=[23,34,54,10,4,7]
+           min=+Infinity
+           max=-Infinity
+            ab.reduce(function(accumilator,value,index,array){
+                if(value<min){
+                    min=value;
+                    
+                }
+            })
+            console.log(min);
+            //2
+            var ab=[23,34,54,10,4,7]
+           min=+Infinity
+           max=-Infinity
+            ab.reduce(function(accumilator,value,index,array){
+                if(value>max){
+                    max=value;
+                    
+                }
+            })
+            console.log(max);
+            //3
+            var ab=[23,34,54,10,4,7]
+             var b=ab.reduce(function(accumilator,value,index,array){
+                accumilator=accumilator+value
+                return accumilator 
+            },0)
+            console.log(b);
+            //4
+            var ab=[23,34,54,10,4,7]
+             var b=ab.reduce(function(accumilator,value,index,array){
+                  accumilator=accumilator+value
+                  return accumilator
+            },0)
+            console.log(b/ab.length);
+            //5
+            /*var ab=[23,34,54,10,4,7]
+            b=+prompt()
+            ab.reduce(function(accumilator,value,index,array){
+                if(b==value){
+                    accumilator++;
+                }
+                
+            },0)
+            if(accumilator>0){
+                console.log('true')
+            }
+            else{
+                console.log('false')
+            }
+            //6
+            var ab=[23,34,54,10,34,7,23,10,34]
+            b=+prompt()
+            ab.reduce(function(accumilator,value,index,array){
+                if(b==a){
+                    accumilator++;
+                }
+            })
+            if(accumilator>0){
+
+               console.log(count)
+            }*/
+            //factors
+            var a=24;
+            for(i=0;i<=24;i++){
+                if(a/i==0){
+                    console.log(i)
+                }
+            }
+            
+             
+             
+             
+
+        
+
+            
+
+
+
+
+           
+            
+
+            
+
+            
+
+        
+
+           
+
+
+           
+
+
+                        
+        
+        
+    
+
+
+
+
+
+
+
+
+            
+        </script>
+    </body>
+</html>

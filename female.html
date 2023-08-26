@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+<body>
+    <button onclick="addlistdata()">Addlist Data</button>
+    <input type="text" id="dd">
+    <div id="df"></div>
+    <script>
+        var x = document.getElementById('df')
+        var url = "https://api.genderize.io"
+        var dd = document.getElementById("dd")
+        function addlistdata(){
+            x.innerHTML=""
+            axios.get(`${url}/?name=${dd.value}`)
+            .then(function(res){
+                var gen = res.data
+                console.log(gen)
+                var di = document.createElement("div")
+                di.style.border="1px solid black"
+                di.style.backgroundColor="darkgrey"
+                di.style.width="250px"
+                di.style.height="200px"
+                di.style.padding="20px"
+                di.style.margin="10px"
+                di.style.display="inline-block"
+                di.style.justifyContent="space-between"
+                var name = document.createElement("h3")
+                name.innerHTML="<b>Name:</b>"+gen.name
+                name.style.textAlign="center"
+                di.appendChild(name)
+                var gender = document.createElement("h3")
+                gender.innerHTML='<b>Gender:</b>'+gen.gender
+                gender.style.textAlign="center"
+                di.appendChild(gender)
+                var prob = document.createElement("h3")
+                prob.innerHTML='<b>Probability:</b>'+gen.probability
+                prob.style.textAlign="center"
+                di.appendChild(prob)
+                x.appendChild(di)
+            })
+        }
+            
+        
+
+        
+    </script>
+    
+</body>
+</html>

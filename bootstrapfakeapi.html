@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <button onclick="getProduct()">Products</button>
+        <button onclick="asc()">Ascending</button>
+        <button onclick="dsc()">Descending</button>
+        <ul id="d1"></ul>
+
+        <script>
+            var x=document.getElementById('d1')
+            //x.setAttribute('class','d-flex flex-wrap')
+            x.setAttribute('class','card')
+           
+            x.style.listStyle='none'
+            x.style.display="flex"
+            x.style.flexWrap='wrap'
+            function getProduct(){
+                axios.get("https://fakestoreapi.com/products").then(function(res){
+                    var products=res.data;
+                    console.log(products)
+                    function genUi(z){
+                    x.innerHTML=""
+                    products.forEach(function(product){
+                         
+                        var y=document.createElement('li')
+                        y.setAttribute('class','card-body')
+                        y.innerHTML="Title:"+product.title
+                        x.appendChild(y)
+                        y.style.padding="20px"
+                        y.style.marginLeft="10px"
+                        y.style.border="1px solid"
+                        y.style.marginBottom="10px"
+                        y.style.width="300px"
+                        var v=document.createElement('img')
+                        v.setAttribute('class','card-image-top')
+                        v.src=product.image
+                        y.appendChild(v)
+                        v.style.width="200px";
+                        v.style.height="100px"
+
+                        var z=document.createElement('div')
+                        z.innerHTML="Price:"+product.price
+                        y.appendChild(z)
+
+                        var w=document.createElement('div')
+                        w.innerHTML="Category:"+product.category
+                        y.appendChild(w)
+                       
+                      
+                })
+            }
+            genUi();
+                })
+            }
+            function asc(){
+                axios.get("https://fakestoreapi.com/products").then(function(res){
+                    var products=res.data;
+                    products.sort(function(a,b){
+                       if(a.title<b.title){
+                        return -1
+                       }
+                       if(a.title>b.title){
+                        return 1
+                       }
+                       return 0
+                    })
+                    
+                    x.innerHTML=""
+                    products.forEach(function(product){
+                        
+                        var y=document.createElement('li')
+                        y.innerHTML="Title:"+product.title
+                        x.appendChild(y)
+                        // y.style.display="inline-block"
+                        y.style.padding="20px"
+                        y.style.marginLeft="10px"
+                        y.style.border="1px solid"
+                        y.style.marginBottom="10px"
+                        y.style.width="200px"
+
+                        var z=document.createElement('div')
+                        z.innerHTML="Price:"+product.price
+                        y.appendChild(z)
+
+                        var w=document.createElement('div')
+                        w.innerHTML="Category:"+product.category
+                        y.appendChild(w)
+                        
+                        var v=document.createElement('img')
+                        v.src=product.image
+                        y.appendChild(v)
+                        v.style.width="200px";
+                        v.style.height="100px"
+                        v.style.boxShadow="50%"
+                })
+            })
+            
+            }
+            function dsc(){
+                axios.get("https://fakestoreapi.com/products").then(function(res){
+                    var products=res.data;
+                    products.sort(function(a,b){
+                       if(a.title>b.title){
+                        return -1
+                       }
+                       if(a.title<b.title){
+                        return 1
+                       }
+                       return 0
+                    })
+                    
+                    x.innerHTML=""
+                    products.forEach(function(product){
+                        
+                        var y=document.createElement('li')
+                        y.innerHTML="Title:"+product.title
+                        x.appendChild(y)
+                        // y.style.display="inline-block"
+                        y.style.padding="20px"
+                        y.style.marginLeft="10px"
+                        y.style.border="1px solid"
+                        y.style.marginBottom="10px"
+                        y.style.width="200px"
+
+                        var z=document.createElement('div')
+                        z.innerHTML="Price:"+product.price
+                        y.appendChild(z)
+
+                        var w=document.createElement('div')
+                        w.innerHTML="Category:"+product.category
+                        y.appendChild(w)
+                        
+                        var v=document.createElement('img')
+                        v.src=product.image
+                        y.appendChild(v)
+                        v.style.width="200px";
+                        v.style.height="100px"
+                        v.style.boxShadow="50%"
+                })
+            })
+            
+            }
+        </script>
+    </body>
+</html>

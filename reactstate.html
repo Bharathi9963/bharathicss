@@ -1,0 +1,710 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="dd"></div>
+        <div id="dr"></div>
+        <div id="dk"></div>
+        <div id="dt"></div>
+        <div id="d"></div>
+        <div id="ddd"></div>
+        <div id="dddd"></div>
+        <div id="de"></div>
+        <div id="dl"></div>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+        <div id="d6"></div>
+        <div id="d7"></div>
+        <div id="d8"></div>
+        <div id="d9"></div>
+        <div id="d10"></div> 
+        <div id="d11"></div>
+        <div id="d12"></div>
+        <div id="d13"></div>
+        <div id="d14"></div>
+        <div id="d15"></div>
+        <div id="d16"></div>
+        <div id="d17"></div>
+        <div id="d18"></div>
+        <div id="d19"></div>
+        <div id="d20"></div>
+        <div id="d21"></div>
+        <div id="d22"></div>
+        <div id="d23"></div>
+        <div id="d24"></div>
+        <div id="d25"></div>
+     
+       
+        
+        <script type="text/babel">
+            //2
+            var Jkl = function () {
+      var [x, setX] = React.useState(10);
+      var [y, setY] = React.useState(20);
+
+      return (
+        <div>
+          <h1>{x + y}</h1>
+        </div>
+      );
+    };
+    ReactDOM.render(<Jkl></Jkl>, document.getElementById("dd"));
+            //3
+           var Ji=function (){
+            var [c,setC]=React.useState('Rama');
+            var [d,setD]=React.useState('sita');
+           
+            return(
+                <>
+            <h1>{c+d}</h1>
+            </>
+            );
+           };
+
+     ReactDOM.render(<Ji/>, document.getElementById("dr"));
+
+            //4
+            var ar=['bharathi','Reshma','Divya','Harshitha']
+             var c=ar.map((a)=>{
+               return  a.length%2==0?a:''
+            })
+            ReactDOM.render(c,document.getElementById('dk'))
+            //5
+            var Abc=function (){
+                var [ar,setar]=React.useState([1,4,7,8])
+                return(
+                    <>
+                    {
+                        ar.map((a)=>{
+                          return   <h1>{a}</h1>
+                    })
+                }
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('dt'))
+            //6
+            var Fir=function(){
+                var [ar2,setar2]=React.useState(['Bharathi','Reshma','Divya','Harshitha'])
+                return(
+                    <>{
+                    ar2.map((b)=>{
+                        return <h1>{b.slice(0,2)}</h1>
+                    })
+                }
+                    </>
+                )
+            }
+          
+            ReactDOM.render(<Fir/>,document.getElementById('d'))
+            //7
+            var Fi=function(){
+                var [ar3,setar3]=React.useState(14)
+                return(
+                    <>{
+                   
+                     <h1>{Math.sqrt(ar3)}</h1>
+                    
+                }
+                    </>
+                )
+            }
+           
+           
+            ReactDOM.render(<Fi/>,document.getElementById('ddd'))
+            //8
+            var Fiu=function(){
+                var [ar4,setar4]=React.useState(134.67)
+                return(
+                    <>{
+                   
+                     <h1>{Math.floor(ar4)}</h1>
+                    
+                }
+                    </>
+                )
+            }
+          
+            ReactDOM.render(<Fiu/>,document.getElementById('dddd'))
+         //9
+         var Flu=function(){
+                var [ar5,setar5]=React.useState('praveen')
+                return(
+                    <>{
+                   
+                     <h1>{ar5.toUpperCase()}</h1>
+                    
+                }
+                    </>
+                )
+            }
+          
+            ReactDOM.render(<Flu/>,document.getElementById('de'))
+        //10
+        var Flo=function(){
+                var [ar6,setar6]=React.useState('praveen')
+                return(
+                    <>{
+                   
+                     <h1>{ar6.length}</h1>
+                    
+                }
+                    </>
+                )
+            }
+          
+            ReactDOM.render(<Flo/>,document.getElementById('dl'))
+            //11
+            var Fio=function(){
+                var [ar7,setar7]=React.useState('praveen')
+                return(
+                    <>{
+                   
+                     <h1>{ar7.split('').reverse().join('')}</h1>
+                    
+                }
+                    </>
+                )
+            }
+          
+            ReactDOM.render(<Fio/>,document.getElementById('d1'))
+            //12
+
+            var Fto = function () {
+      var [x, setX] = React.useState(10);
+      var [y, setY] = React.useState(20);
+
+      return (
+        <div>
+          <h1>{x + y}</h1>
+        </div>
+      );
+    };
+    ReactDOM.render(<Fto/>,document.getElementById('d2'))
+    //13
+    var Fko = function () {
+      var [x, setX] = React.useState(10);
+      var [y, setY] = React.useState(20);
+
+      return (
+        <div>
+          <h1>{x>y?x:y}</h1>
+        </div>
+      );
+    };
+    ReactDOM.render(<Fko/>,document.getElementById('d3'))
+    //14
+    var Fkk= function () {
+      var [num, setnum] = React.useState(10);
+    
+
+      return (
+        <div>
+          <h1>{num%2===0?'even':'odd'}</h1>
+        </div>
+      );
+    };
+    ReactDOM.render(<Fkk/>,document.getElementById('d4'))
+    //15
+    var Fko = function () {
+      var [x, setX] = React.useState(10);
+      var [y, setY] = React.useState(20);
+      var [z, setZ] = React.useState(30);
+
+
+      return (
+        <div>
+          <h1>{x>y?(x>z?x:z):(y>z?y:z)}</h1>
+        </div>
+      );
+    };
+    ReactDOM.render(<Fko/>,document.getElementById('d5'))
+    //16
+    var Ffo = function () {
+        var h=+prompt()
+      var [l, setl] = React.useState(h);
+    
+      return (
+        <div>
+          <h1>{l%2===0?'even':'odd'}</h1>
+        </div>
+      );
+    };
+    ReactDOM.render(<Ffo/>,document.getElementById('d6'))
+    //17
+    var Fjo = function () {
+       
+    
+      
+      var k=+prompt()
+
+      var [u, setu] = React.useState(k);
+    
+      return (
+        <div>
+            {k % 2 === 0 ? (<img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg" />): (<img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg" />)}
+        </div>
+      );
+    };
+    ReactDOM.render(<Fjo/>,document.getElementById('d7'))
+    //18
+    var Fjo = function () {
+       
+    
+      
+       var k=+prompt()
+ 
+       var [u, setu] = React.useState(k);
+     
+       return (
+         <div>
+            <img src={k%2===0?('https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg'):('https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg')}/>
+         </div>
+       );
+     };
+     ReactDOM.render(<Fjo/>,document.getElementById('d8'))
+     //19
+     var Fir=function(){
+                var [ar2,setar2]=React.useState(['Bharathi','Reshma','Divya','Harshitha'])
+                return(
+                    <>
+                    <ul>
+                    {
+                    ar2.map((b)=>{
+                        return <li>{b.toUpperCase()}</li>
+                    })
+                }
+                </ul>
+                <ol>
+                    {
+                    ar2.map((b)=>{
+                        return <li>{b.toUpperCase()}</li>
+                    })
+                }
+                </ol>
+                    </>
+                )
+            }
+          
+            ReactDOM.render(<Fir/>,document.getElementById('d9'))
+
+    //21
+    var Abc=function (){
+                var [ar,setar]=React.useState([1,4,7,8])
+                return(
+                    <>
+                    {
+                        ar.map((a)=>{
+                          return   <h1>{a}</h1>
+                    })
+                }
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('d10'))
+    //22
+    var Abc=function (){
+                var [ar,setar]=React.useState([1,4,7,8])
+                return(
+                    <>
+                    {
+                        ar.map((a)=>{
+                          return   <h1>{a*a}</h1>
+                    })
+                }
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('d11'))
+    //23
+    var Abc=function (){
+                var [ar,setar]=React.useState([1,4,7,8])
+                var [br,setbr]=React.useState([10,12,9,13])
+                return(
+                    <>
+                    {
+                       
+                         ar.concat(br).map((a)=>{
+                            return <li>{a}</li>
+                         })
+                    }
+                
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('d12'))
+    //24
+    var Abc=function (){
+                var [ar,setar]=React.useState([1,4,7,8])
+                var [br,setbr]=React.useState([9,10,11,12])
+                return(
+                    <>
+                    {
+                       
+                        ar.concat(br).sort((a,b)=>{ return a>b?1:-1}) .map((a)=>{
+                            return <li>{a}</li>
+                         })
+                    }
+                
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('d13'))
+     //25
+     var Abc=function (){
+                var [ar,setar]=React.useState([1,4,7,8])
+               
+                return(
+                    <>
+                    {
+                       
+                       ar.map((a)=>{
+                            return a%2==0?(<li>{a}</li>):('')
+                         })
+                    }
+                
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('d14'))
+    //26
+    var Abc=function (){
+                var [ar,setar]=React.useState([1,4,7,8])
+               
+                return(
+                    <>
+                    {
+                       
+                       ar.map((a)=>{
+                            return a%2!==0?(<li>{a}</li>):('')
+                         })
+                    }
+                
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('d15'))
+    //27
+    var Abc=function (){
+                var [ar,setar]=React.useState([1,4,7,8])
+               
+                return(
+                    <>
+                    {
+                       
+                       ar.map((a)=>{
+                            return a>25?(<li>{a}</li>):('')
+                         })
+                    }
+                
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('d15'))
+    //28
+    var Abc=function (){
+                var [ar,setar]=React.useState([1,4,7,8])
+               
+                return(
+                    <>
+                    {
+                       
+                       ar.map((a)=>{
+                            return a%2==0?(<li><b>{a}</b></li>):(<li><i>{a}</i></li>)
+                         })
+                    }
+                
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('d16'))
+        //29
+        var Abc=function (){
+            
+                var [ar,setar]=React.useState([1,4,7,8])
+               
+                return(
+                    <>
+                    {
+                       
+                       ar.reduce((acc,a)=>{
+                            return acc+a
+                         },0)
+                    }
+                
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('d17'))
+        //30
+        var Abc=function (){
+                var [ar,setar]=React.useState(['praveen','Bharathi','Divya','Reshma'])
+             
+                return(
+                    <>
+                    {
+                       
+                        ar.sort((a,b)=>{ return a>b?1:-1}) .map((a)=>{
+                            return <li>{a}</li>
+                         })
+                    }
+                
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('d18'))
+        //31
+        var Abc=function (){
+                var [ar,setar]=React.useState(['praveen','Bharathi','Divya','Reshma'])
+             
+                return(
+                    <>
+                    {
+                       
+                      ar.map((a)=>{
+                            return <li>{a.length}</li>
+                         })
+                    }
+                
+                    
+                    </>
+                )
+            }
+           
+            ReactDOM.render(<Abc/>,document.getElementById('d19'))
+        //35
+       
+        var Jkl = function () {
+            var [students, setStudents] = React.useState([
+                {
+                    firstname: "Praveen",
+                    lastname: "Gubbala",
+                    age: 40
+                },
+                {
+                    firstname: "Rohit",
+                    lastname: "Sharma",
+                    age: 35
+                },
+                {
+                    firstname: "Sachin",
+                    lastname: "Tendulkar",
+                    age: 50
+                },
+            ]);
+            return (
+                <div>
+
+                    <table border='2'>
+                        {
+                            students.map((s) => {
+                                return (
+                                    <tr>
+                                        <td>{s.firstname}</td>
+                                        <td>{s.lastname}</td>
+                                        <td>{s.age}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </table>
+
+                </div>
+            )
+        }
+        ReactDOM.render(<Jkl />, document.getElementById('d20'));
+        //36
+        var Jkl = function () {
+            var [students, setStudents] = React.useState([
+                {
+                    firstname: "Praveen",
+                    lastname: "Gubbala",
+                    age: 40,
+                    gender:'male'
+                },
+                {
+                    firstname: "Bharathi",
+                    lastname: "Reddy",
+                    age: 22,
+                    gender:'female'
+
+                },
+                {
+                    firstname: "Reshma",
+                    lastname: "Rao",
+                    age: 50,
+                    gender:'female'
+                },
+            ]);
+            return (
+                <div>
+
+                    <table border='2'>
+                        {
+                            students.map((s) => {
+                                return (
+                                    <tr>
+                                        <td>{s.firstname}</td>
+                                        <td>{s.lastname}</td>
+                                        <td>{s.age}</td>
+                                        <td>{s.gender}</td>
+                                        <td>{s.gender==='female'? (<img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg" />): (<img src="https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074__340.jpg" />)}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </table>
+
+                </div>
+            )
+        }
+        ReactDOM.render(<Jkl />, document.getElementById('d21'));
+        //37
+        var Fio=function(){
+                var [ar7,setar7]=React.useState(['Bharathi','Divya','Reshma'])
+                return(
+                    <>{
+                     ar.map((a)=>{
+                      return   <h1>{a.split('').reverse().join('')}</h1>
+                     })
+                    
+                    
+                }
+                    </>
+                )
+            }
+          
+            ReactDOM.render(<Fio/>,document.getElementById('d22'))
+        //38
+        var Jkl = function () {
+            var [obj, setObj] = React.useState({
+                firstname: "Praveen",
+                lastname: "Gubbala",
+                age: 40
+            });
+            return (
+                <div>
+                    <h1>Firstname:{obj.firstname}</h1>
+                    <h1>Lastname:{obj.lastname}</h1>
+                    <h1>Age:{obj.age}</h1>
+                </div>
+            )
+        }
+        ReactDOM.render(<Jkl />, document.getElementById('d23'));
+        //39
+        //clock
+        var ar = []
+      function pqr(){
+        var date = new Date();
+        var time = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
+        document.getElementById('pp').innerHTML=time;
+      }
+      setInterval(()=>{
+        pqr()
+      },1000)
+      var jh1 = <div>
+                  <h1 id='pp'></h1>
+                </div>
+      ReactDOM.render(jh1,document.getElementById("d24"))
+      //40
+      var students = [
+                {
+                    firstname:'pravee',
+                    lastname:'gubbala',
+                    age:38
+                },
+                {
+                    firstname:'anupama',
+                    lastname:'reddy',
+                    age:28
+                },
+                {
+                    firstname:'priya',
+                    lastname:'kaman',
+                    age:23
+                },
+                {
+                    firstname:'kiran',
+                    lastname:'rao',
+                    age:25
+                },
+                {
+                    firstname:'triveni',
+                    lastname:'manu',
+                    age:29
+                }
+            ];
+            function deleteTask(index){
+                students.splice(index,1);
+                console.log(students);
+                ReactDOM.render(genTable(),document.getElementById('d25'))
+            }
+            function genTable(){
+                var mytable =   (<table border="2">
+                                <thead>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Age</th>
+                                    <th>Options</th>
+                                </thead>
+                                <tbody>
+                                    {
+                                        students.map((s,i)=>{
+                                            return  <tr>
+                                                        <td>{s.firstname}</td>
+                                                        <td>{s.lastname}</td>
+                                                        <td>{s.age}</td>
+                                                        <td>
+                                                            <button onClick={()=>{
+                                                                deleteTask(i)
+                                                            }}>Delete</button>
+                                                        </td>
+                                                    </tr>
+                                        })
+                                    }    
+                                </tbody>
+                            </table>)
+                return mytable;
+            }
+            
+            ReactDOM.render(genTable(),document.getElementById('d25'))
+                                
+        
+           
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

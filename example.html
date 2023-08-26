@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        Enter Url:<input type="text" id="de">
+        <button onclick="x(event)">Add Image</button>
+        <div id="d8">
+           <!--<img src="" id="g">-->
+        </div>
+        <br><br>
+        <script>
+            var t=document.getElementById('de')
+           var f=document.getElementById('g')
+            var z=document.getElementById('d8')
+            var j=0
+            var a=[]
+            function x(e){
+                a.push(t.value)
+                console.dir(t)
+                z.innerHTML=""
+                a.forEach(function(v){
+                var b=document.createElement('img')
+                b.src=v
+                z.appendChild(b)
+                
+             })
+                
+                
+            }
+        </script>
+    </body>
+</html>

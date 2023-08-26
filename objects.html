@@ -1,0 +1,157 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            //1
+        //     var person={
+        //         firstName :"Harry",
+        //         lastName :"Potter",
+        //         age:30,
+        //         gender:"male",
+        //         skill:"ReactJs",
+        //         expertise:"Beginner"
+        //     }
+        //    console.log(person.firstName)
+        //    console.log(person.lastName)
+        //    console.log(person.firstName,person.lastName)
+        //    for(k in person){
+        //     if(k[2]<18){
+        //         console.log('false')
+        //     }
+        //     else{
+        //         console.log('true')
+        //     }
+        //    }
+
+        //    //2
+            var marks = {
+              maths : 34,
+              english : 56,
+              science: 32,
+              hindi : 75,
+             socialscience: 65
+            }
+        //     for(var k in marks){
+        //     console.log(marks[k])}
+        //     for(var k in marks){
+        //     console.log(k)
+          
+        //     }
+        //     var count=0;
+        //     for(var k in marks){
+        //     if(count<=5){
+        //         count++
+
+        //     }
+        //     }
+        //     console.log(count)
+        //     var total=0;
+        //     var percentage;
+        //     var sum=0;
+        //     for(var k in marks){
+        //         if(marks[k]<=100)
+        //         total=total+marks[k];
+        //         sum=(total/500)*100
+        //         marks[k]++;
+        //     }
+        //     console.log(sum)
+        //     for(var k in marks){
+        //         if(marks[k]>35)
+        //           console.log(k)
+               
+        //     }
+
+            for(var k in marks){
+                if(marks[k]>=35){
+                  console.log("pass")
+                }
+                else{
+                    console.log("fail")
+                }
+               
+            }
+            for(var k in marks){
+                if(marks[k]>=35){
+                  console.log(k)
+                }
+                
+               
+            }
+            var count=0;
+            for(var k in marks){
+               if(marks[k]>=35){
+                count=count+1
+               }
+               
+            }
+            for(var k in marks){
+                if(marks[k]<35){
+                  console.log(k)
+                }
+                
+               
+            }
+
+            
+
+            var count=0;
+            for(var k in marks){
+               if(marks[k]<35){
+                count=count+1
+               }
+               
+            }
+            console.log(count)
+
+            for(var k in marks){
+                if(marks[k]<35){
+                    console.log(k)
+                }
+            }
+            if(marks.maths<marks.science){
+                        console.log('maths');
+                }
+                
+                    else{
+                        console.log('science');
+                }
+
+                for(var k in marks){
+                if(marks[k]>70){
+                    console.log(k)
+                }
+            } 
+            var count=0;  
+            for(var k in marks){
+                if(marks[k]<35){
+                    count=count+1;
+
+                }
+            }
+            if(count>0){
+                    console.log('failed')
+                }
+                else{
+                    console.log('passed in all subjects')
+                }
+        var k=prompt()
+            if(marks[k]>35){
+                console.log('pass')
+                console.log(marks[k])
+            }
+            else{
+                console.log('fail')
+                console.log(marks[k])
+            }
+    
+
+
+        
+            
+            
+
+            
+
+        </script>
+    </body>
+</html>

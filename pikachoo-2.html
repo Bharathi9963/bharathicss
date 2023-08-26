@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    </head>
+    <body>
+        
+       
+       
+        <center><div id="ff" style="text-align: center;"></div></center>
+        <script>
+      
+            var y=document.getElementById('ff')
+            y.style.boxShadow="5px 2px 5px"
+           y.style.backgroundColor="skyblue"
+
+         
+            y.innerHTML=""
+            var url="https://pokeapi.co/api/v2/pokemon"
+            var idNum=Math.floor(Math.random()*500)+1;
+            //var imgurl="https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/"
+            axios.get(`${url}/${idNum}`).then(function(res){
+                var products=res.data
+                console.log(products)
+                y.style.border='4px solid'
+                y.style.width='fit-content'
+                y.style.height='fit-content'
+                
+                var a=document.createElement('img')
+                //a.src=imgurl+count+"."+"svg"
+                a.src=products.sprites.front_default
+                a.style.boxShadow="10px 2px 10px"
+             
+                a.style.border='3px solid'
+                a.style.width='100px'
+                a.style.heigth='150px'
+                a.style.borderRadius="50%"
+                
+                y.appendChild(a)
+                
+                var g=document.createElement('h1')
+                g.innerHTML="Name::"+products.name
+                y.appendChild(g)
+                var hp=document.createElement('p')
+                hp.innerHTML="Hp:"+products.stats[0].base_stat
+                y.appendChild(hp)
+                var typ=document.createElement('p')
+                typ.innerHTML=products.types[0].type.name
+                typ.style.backgroundColor="pink"
+                typ.style.border='1px solid'
+                typ.style.width="fit-content"
+                typ.style.display='inline-block'
+               typ.style.marginRight="40px"
+                y.appendChild(typ)
+                var ty=document.createElement('p')
+                ty.innerHTML=products.types[1].type.name
+                ty.style.backgroundColor="pink"
+                ty.style.border='1px solid'
+                ty.style.width="fit-content"
+                ty.style.display='inline-block'
+                y.appendChild(ty)
+                var ho=document.createElement('p')
+                ho.innerHTML="Attacks:"+products.stats[1].base_stat
+                y.appendChild(ho)
+                var hq=document.createElement('p')
+                hq.innerHTML="Defence:"+products.stats[2].base_stat
+                y.appendChild(hq)
+                var hv=document.createElement('p')
+                hv.innerHTML="Speed:"+products.stats[3].base_stat
+                y.appendChild(hv)
+                
+
+            })
+            
+        
+        </script>
+    </body>
+</html>

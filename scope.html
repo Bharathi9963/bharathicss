@@ -1,0 +1,72 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+      <input type="text" id="d2">
+      <button onclick="abc()">add student</button>
+        <ul id="dd">
+
+        </ul> 
+
+        <script>
+      
+
+      
+       /* ar=['bharathi','divya','reshma','harshitha','sharmila']
+
+
+
+      var y=document.getElementById('dd')
+      function genUI(){
+        y.innerHTML=''
+        ar.forEach(function(a,i){
+         var x=document.createElement('li')
+          x.innerHTML=a
+         var c=document.createElement('button')
+          c.innerHTML='delete'
+          x.appendChild(c)
+          c.onclick=function(){
+            ar.splice(i,1);
+            genUI() 
+          }
+          y.appendChild(x)
+
+        })
+    }
+    genUI()*/
+
+    var x=document.getElementById('d2')
+    var y=document.getElementById('dd')
+    ar=[]
+    function abc(){
+      ar.push(x.value)
+      ghc()
+    }
+
+      function ghc(){
+        y.innerHTML=''
+        ar.forEach(function(a,i){
+         var x=document.createElement('li')
+          x.innerHTML=a
+         var c=document.createElement('button')
+          c.innerHTML='delete'
+          x.appendChild(c)
+          c.onclick=function(){
+            ar.splice(i,1);
+            ghc() 
+          }
+          y.appendChild(x)
+
+        })
+    }
+    ghc()
+
+    
+
+          
+        
+          
+        </script>
+    </body>
+</html>

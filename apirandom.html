@@ -1,0 +1,58 @@
+<html>
+    <head> 
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    </head>
+
+    <body >
+        <button onclick="abc()">Click here</button>
+        <br><br>
+      <div id="dd">
+
+      </div>
+        
+        <script>
+         
+          
+         var x=document.getElementById('dd')
+        
+            function abc(){
+                x.innerHTML=""
+                axios.get("https://api.quotable.io/random").then(function(res){
+                    
+                    var products=res.data
+                    
+                    
+                   
+                var y = document.createElement("div")
+                y.style.width = "fit-content"
+                //y.style.height = "250px"
+                y.style.border = "1px solid"
+                y.style.boxSizing="border-box"
+                y.style.color = "red"
+                y.style.fontSize = "16px"
+                y.style.backgroundColor = "pink"
+                y.style.textAlign = "center"
+                y.style.padding = "10px"
+                y.style.marginBottom = '10px'
+              
+                     
+                var uname = document.createElement("p")
+                uname.innerHTML = "<b>Author:</b>" + products.author
+                var u = document.createElement("h3")
+                u.innerHTML= products.content
+                y.appendChild(uname)
+                y.appendChild(u)
+                x.appendChild(y)    
+                 
+                
+               
+        
+     })
+        }
+                    
+         
+           
+        </script>
+    </body>
+
+</html>

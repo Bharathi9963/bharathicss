@@ -1,0 +1,249 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="mno()">Addtext</button>
+        <div id="dd"></div>
+    
+        <div id="df" >
+           
+        </div>
+
+        <br><br>
+        <button onclick="abc()">red</button>
+        <button onclick="fgh()">pink</button>
+        <button onclick="ijk()">yellow</button>
+        <button onclick="fbg()">blue</button><br><br>
+        <button onclick="nmo()" id="d7">white</button>
+        <h3 onclick="fmb(event)">blue</h3>
+        <button onclick="zxy()">click me</button><br><br>
+        <button onmouseover="alert('hi')">resh</button>
+        <div id="dl">
+
+        </div>
+        <div id="d2"></div><br>
+        <h1 id="d5">
+        <button onclick="z(event)" >bhar</button>
+        </h1>
+
+        <button onclick="c()">increment</button>
+        <span id="d4">0</span>
+        <button onclick="b()">decrement</button>
+        <div id="bb">
+
+        </div>
+        <button onclick="bf()">true/false</button>
+        <div id="bhar">
+             
+
+        </div>
+        <button onclick="n()" id="lohi">ON</button>
+        <button onclick="m()" id="tha">Off</button>
+
+        <div id="bev">
+
+        </div>
+        
+        
+        <button onclick="jun(event)">on</button>
+        
+       
+        
+    </body>
+    <script>
+        //2
+       var x=document.getElementById('df')
+       x.style.border='1px solid black'
+       x.style.width='30%'
+       x.style.height='30%'
+       function mno(){
+         var x=document.createElement('h1')
+         x.innerHTML='welcome to edupoly'
+         var y=document.getElementById('dd')
+         y.appendChild(x)
+       }
+       function abc(){
+        x.style.backgroundColor="red"
+       }
+       function fgh(){
+        x.style.backgroundColor="pink"
+       }
+       function ijk(){
+        x.style.backgroundColor="yellow"
+       }
+       function fbg(){
+        x.style.backgroundColor="blue"
+       }
+       var a=document.getElementById('d7')
+       a.style.backgroundColor="white"
+       function nmo(){
+        if(a.style.backgroundColor==="white"){
+        a.innerHTML='green'
+        a.style.backgroundColor='green'
+        //a.style.color='white'
+    }
+        else{
+    
+        a.innerHTML='white'
+        a.style.backgroundColor='white'
+        //a.style.color='black'
+        }
+        
+       }
+       function fmb(e){
+         
+         e.target.innerHTML=""
+         e.target.innerHTML='oops'
+       }
+       function zxy(){
+        var d2=document.getElementById("d2");
+        var a=document.createElement("table");
+        a.style.border="1px solid"
+        d2.appendChild(a);
+        var b=document.createElement("tr");
+        b.style.border="1px solid"
+        a.appendChild(b);
+        var c=document.createElement("th");
+        c.style.border="1px solid"
+        c.innerHTML="Name";
+        b.appendChild(c);
+        var d=document.createElement("th");
+        d.style.border="1px solid"
+        d.innerHTML="Age";
+        b.appendChild(d);
+        var e=document.createElement("th");
+        e.style.border="1px solid"
+        e.innerHTML="Gender";
+        b.appendChild(e);
+        var j=document.createElement("tr");
+        j.style.border="1px solid"
+        a.appendChild(j);
+        var h=document.createElement("td");
+        h.style.border="1px solid"
+        j.appendChild(h);
+        h.innerHTML="Reshma";
+        var i=document.createElement("td");
+        i.style.border="1px solid"
+        j.appendChild(i);
+        i.innerHTML="22";
+        var k=document.createElement("td");
+        k.style.border="1px solid"
+        j.appendChild(k);
+        k.innerHTML="Nellore";
+        var l=document.createElement("tr");
+        l.style.border="1px solid"
+        a.appendChild(l);
+        var m=document.createElement("td");
+        m.style.border="1px solid"
+        l.appendChild(m);
+        m.innerHTML="Bharathi";
+        var n=document.createElement("td");
+        n.style.border="1px solid"
+        l.appendChild(n);
+        n.innerHTML="22";
+        var o=document.createElement("td");
+        o.style.border="1px solid"
+        l.appendChild(o);
+        o.innerHTML="Hyd";
+        var z=document.getElementById("d2");
+        z.appendChild(a);
+       }
+       function z(e){
+         e.target.innerHTML=""
+         var z=document.getElementById('d5')
+         z.innerHTML='oops'
+         
+       }
+       count=0;
+       var g=document.getElementById('d4')
+       g.innerHTML=count
+       
+       function c(){
+         count++;
+        
+         g.innerHTML=count
+       }
+       count=0;
+       function b(){
+         count--;
+        
+         g.innerHTML=count
+       }
+       var y=document.getElementById('bb')
+       y.style.border='1px solid black'
+       y.style.width='10%'
+       y.style.height='10%'
+       var x='nothing'
+       y.innerHTML=x
+       var m=true
+        function bf(){
+         if(m=!m){
+            return true;
+         }
+      
+       }
+       //8
+       var j=document.getElementById('bhar')
+        j.style.border='1px solid black'
+        j.style.width='10%'
+        j.style.height='10%'
+        var l=document.getElementById('lohi')
+        var g=document.getElementById('tha')
+        function n(){
+           
+           l.style.backgroundColor='red'
+           
+           j.style.backgroundColor='pink'
+           if(l.style.backgroundColor==='red'){
+            g.style.backgroundColor='white'
+           }
+        }
+        function m(){
+          
+       
+          g.style.backgroundColor='red'
+          j.style.backgroundColor='blue'
+          if(g.style.backgroundColor==='red'){
+            l.style.backgroundColor='white'
+           }
+        }
+        //10
+        var f=document.createElement('img')
+        f.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTacyyukK5FW4-wB19_IRkjKhc52CwranBVAQ&usqp=CAU'
+        f.style.width='100%'
+        f.style.height='100%'
+
+
+        var h=document.createElement('img')
+        h.src='https://media.istockphoto.com/id/1426044764/photo/3d-rendered-incandescent-light-bulb.jpg?s=612x612&w=0&k=20&c=pWa-4QCSLB8tNEjr6gkxT4qc4nUMtkYOkcKYtW7dBVc='
+        h.style.width='100%'
+        h.style.height='100%'
+        
+        var c=document.getElementById('bev')
+        c.style.border='1px solid black'
+        c.style.width='50%'
+        c.style.height='50%'
+        
+        e.target.innerHTML='on'
+       
+       
+        function jun(e){
+          
+          c.appendChild(f)
+          if(e.target.innerHTML==='on'){
+            c.innerHTML=''
+            c.appendChild(f)
+            e.target.innerHTML='off'
+          }
+          
+          else if( e.target.innerHTML==='off'){
+            c.innerHTML=''
+            c.appendChild(h)
+            e.target.innerHTML='on'
+          }
+         
+
+        }
+
+
+    </script>
+</html>

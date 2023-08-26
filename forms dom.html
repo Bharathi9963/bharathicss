@@ -1,0 +1,348 @@
+<html>
+    <head></head>
+    <body>
+        <div id="d4"></div>
+        <form onsubmit="event.preventDefault()">
+            first name:<input type="text" id="fn"><br>
+            Last name:<input type="text" id="ln"><br>
+            <b>gender:</b>
+            <input type="radio" name="gender" value="female" onchange="getgender(event)">:female
+            <input type="radio" name="gender" value="male" onchange="getgender(event)">:male
+            <input type="radio" name="gender" value="others" onchange="getgender(event)">:others
+            <br>
+            <b>technologies:</b>
+            <input type="checkbox" onchange="selecttech(event)" value="html">:HTML
+            <input type="checkbox" onchange="selecttech(event)" value="ang">:Angular
+            <input type="checkbox" onchange="selecttech(event)" value="rjs">:Reactjs
+            <input type="checkbox" onchange="selecttech(event)" value="java">:Java
+            <input type="checkbox" onchange="selecttech(event)" value="py">:Python
+            <input type="checkbox" onchange="selecttech(event)" value="njs">:Nodejs
+            <br>
+            <b>Country:</b>
+            <select name="city" id="ctry">
+            <option value="india">INDIA</option>
+            <option value="srilanka">SRILANKA</option>
+            <option value="usa">USA</option>
+            <option value="malasia">MALASIA</option>
+            </select>
+            <br><br>
+            <button onclick="addstudent()" id="ff">Add student</button>
+        </form>
+        <div id="d1"></div><br><br>
+        
+        <script>
+            var g=document.getElementById('ff')
+            var students=[]
+            var gender;
+            var techs=[];
+            function selecttech(e){
+                if(e.target.checked===true){
+                    techs.push(e.target.value)
+                }
+                else{
+                    var i=text.indexOf(e.target.value)
+                    techs.splice(i,1)
+                }
+                console.log(techs)
+            } 
+            function getgender(e){
+                gender=e.target.value
+            }
+             
+            var d1=document.getElementById('d1')
+            var a=document.createElement('table')
+            a.style.border="1px solid black"
+
+
+             var xy=document.createElement('tr')
+            
+            var yz=document.createElement('th')
+            yz.style.border="1px solid black"
+             yz.innerHTML='Firstname'
+             var zy=document.createElement('th')
+             zy.style.border="1px solid black"
+             zy.innerHTML='Lastname'
+
+             var wx=document.createElement('th')
+             wx.style.border="1px solid black"
+             wx.innerHTML='gender'
+
+             var fb=document.createElement('th')
+             fb.style.border="1px solid black"
+             fb.innerHTML='technologies'
+
+                 var el=document.createElement('th')
+                 el.style.border="1px solid black"
+                 el.innerHTML='country'
+                 xy.appendChild(yz)
+                 xy.appendChild(zy)
+                 xy.appendChild(wx)
+                 xy.appendChild(fb)
+                 xy.appendChild(el)
+                 a.appendChild(xy)
+                 d1.appendChild(a)
+              
+                
+            function addstudent(){
+                var newstudent={
+                   firstname:"",
+                   lastname:"",
+                   gender:"",
+                   technologies:[],
+                   country:""
+                }
+
+              
+                newstudent.firstname=document.getElementById('fn').value;
+                newstudent.lastname=document.getElementById('ln').value;
+                newstudent.gender=gender
+                newstudent.technologies=techs
+                newstudent.country=document.getElementById("ctry").value
+               i=0;
+              
+                students[i]=newstudent
+
+
+            
+                 
+            
+            students.forEach(function(value){
+                 var x=document.createElement('tr')
+                 
+                 var y=document.createElement('td')
+                 y.style.border="1px solid black"
+                 y.innerHTML=value.firstname
+                 
+                 var z=document.createElement('td')
+                 z.style.border="1px solid black"
+                 z.innerHTML=value.lastname
+
+                 var w=document.createElement('td')
+                 w.style.border="1px solid black"
+                 w.innerHTML=value.gender
+
+                 var f=document.createElement('td')
+                 f.style.border="1px solid black"
+                 f.innerHTML=value.technologies
+
+                 var e=document.createElement('td')
+                 e.style.border="1px solid black"
+                 e.innerHTML=value.country
+                 x.appendChild(y)
+                 x.appendChild(z)
+                 x.appendChild(w)
+                 x.appendChild(f)
+                 x.appendChild(e)
+                 a.appendChild(x)
+            })
+            d1.appendChild(a)
+
+
+
+            }
+          
+
+   
+            
+        
+            
+    </script>
+    </body>
+    
+
+</html>
+<html>
+    <head></head>
+    <body>
+        Enter Url:<input type="text" id="de">
+        <button onclick="x(event)">Add Image</button>
+        <div>
+           <img src="" id="g">
+        </div>
+        <br><br>
+        <script>
+            var t=document.getElementById('de')
+            var f=document.getElementById('g')
+            function x(e){
+               
+                f.src=t.value
+                
+            }
+        </script>
+    </body>
+</html>
+<html>
+    <head></head>
+    <body id="4">
+        
+        Name:<input type="text" id="g"><br><br>
+        
+        Number:<input type="text" id="1"><br><br>
+        Email:<input type="email" id="2"><br><br>
+        Enter image URL:<input type="text" id="3"><br>
+        <center><img src="" id="9" ></center>
+        <button onclick="j(event)">Add contact</button>
+        <script>
+            
+          
+            var num=document.getElementById('1')
+            var em=document.getElementById('2')
+            var img=document.getElementById('3')
+            var bo=document.getElementById('4')
+            var q=document.getElementById('9')
+            
+            var p=document.createElement('div')
+            
+            var sp=document.createElement('span')
+            p.style.border='1px solid black'
+            p.style.width='10%'
+            p.style.height='10%'
+            function j(e){
+                var name=document.getElementById('g')
+                var t=name.innerHTML
+                console.log(t)
+              
+              
+             
+                q.src=img.value
+                q.style.width='20%'
+        
+                p.appendChild(q)
+                bo.appendChild(p)
+               
+               
+            }
+        </script>
+    </body>
+</html>
+
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <!-- 15 -->
+        <h1 style="color:red">Add Students</h1>
+        <input type="text" id="d6">
+        <button onclick="xyz(event)">ADD Student</button>
+        <div>
+            <ul id="d7"></ul>
+        </div>
+        <!-- 16 -->
+        <div style="height:40%;border:1px solid;width:40%" id="d1">
+        <img src="" id="d2" onclick="dfg(event)" style="height:100%;width:100%"></div><br><br>
+        <!-- 18 -->
+        <div id="d3"> </div><br>
+        <button onclick="abc()">red</button>
+        <button onclick="def()">green</button>
+        <button onclick="ghi()">blue</button>
+        <button onclick="qwe()">reset</button><br><br>
+        <script>
+            
+            // 15
+            function xyz(e){
+                var e=document.getElementById('d6')
+                var w=document.getElementById('d7')
+                var y=document.createElement('li')
+                y.innerHTML=e.value;
+                w.appendChild(y)
+            }
+            // 16
+            var t=document.getElementById('d1')
+            var u=document.querySelector("#d2")
+            var ar=['https://thehappypuppysite.com/wp-content/uploads/2017/12/puppy9.jpg','https://i.pinimg.com/originals/26/b2/85/26b2859ad4385f64db73f7d8cacf0340.jpg','https://upload.wikimedia.org/wikipedia/commons/b/b4/Golden_Retriever_puppy_standing.jpg']
+            var i=0;
+            function dfg(e){
+                if(i==ar.length-1){
+                    i=0;
+                    u.src=ar[i]
+                }
+                else{
+                    i++;
+                    u.src=ar[i]
+                }
+                console.log(e.target)
+            }
+            // 18
+            var d1=document.getElementById("d3");
+            d1.style.border="1px solid";
+            d1.style.width="13%"
+            d1.style.height="30%"
+            function abc(){
+                d3.style.backgroundColor="red";
+            }
+            function def(){
+                d3.style.backgroundColor="green";
+            }
+            function ghi(){
+                d3.style.backgroundColor="blue";
+            }
+            function qwe(){
+                d3.style.backgroundColor="white";
+            }
+            
+        </script>
+    </body>
+</html>
+<html>
+    <head></head>
+    <body> 
+        <input type="text" id="fg">
+        <button onclick="dfg(event)">Add student</button>
+        <ul id="ll">
+
+        </ul>
+        <script>
+         var l=document.getElementById('ll')
+         var g=document.getElementById('fg')
+        var i=0
+         var ar=[]
+         function dfg(e){
+            
+            ar[i]=g.value
+            i++
+           l.innerHTML=""
+
+            ar.forEach(function(value){
+                var k=document.createElement('li')
+               k.innerHTML=value
+               l.appendChild(k)
+            })
+           
+         }
+        </script>
+    </body>
+</html>
+<html>
+    <head></head>
+    <body>
+        Enter Url:<input type="text" id="de">
+        <button onclick="x(event)">Add Image</button>
+        <div id="d8">
+           <!--<img src="" id="g">-->
+        </div>
+        <br><br>
+        <script>
+            var t=document.getElementById('de')
+           var f=document.getElementById('g')
+            var z=document.getElementById('d8')
+            var j=0
+            var a=[]
+            function x(e){
+                a.push(t.value)
+                console.dir(t)
+                a.forEach(function(v){
+                var b=document.createElement('img')
+                b.src=v
+                z.appendChild(b)
+                
+             })
+                
+                
+            }
+        </script>
+    </body>
+</html>
+

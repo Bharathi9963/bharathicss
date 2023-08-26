@@ -1,0 +1,69 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="alert('hi')">Clickme</button>
+       
+        <button onclick='abc()'>Click me</button>
+        <div id="dd"></div>
+        <script>
+            //1
+            //what is event handling?
+            //Binding the eventlistener and event handler together is called event handling or
+           // When JavaScript does something in response to these events, it’s called event handling
+           //2
+           //How to add event attribute to the element using inline method?
+           //Answer
+           //3
+           //How to add event attribute using function
+          
+
+           //answer
+           function abc(){
+            alert('hi')
+           }
+           //4
+          //How to add event attribute dynamically to the element using function definition
+          var g=document.getElementById('dd')
+          var f=document.createElement('button')
+          f.innerHTML='clickme'
+          f.addEventListener('click',function(){console.log('hi')})
+          g.appendChild(f)
+          //5
+          //adding event attribute dynamically using function name
+          
+          var l=document.createElement('button')
+          l.innerHTML='clickme'
+          l.addEventListener('click',fgh)
+          function fgh(){
+            console.log('hi')
+          }
+          g.appendChild(l)
+          //6
+            //Print the sum of two numbers by attaching event handler to element properties of a button.
+            var d=10;
+            var m=20;
+            var p=document.createElement('button')
+            p.innerHTML='addme'
+            p.addEventListener('click',sum)
+           function sum(){
+              console.log( d+m)
+            }
+            g.appendChild(p)
+            //7
+            //Types of eventlisterners
+            //Click Event Listener: These respond to click events, such as when a user clicks on an HTML element
+            //Mouseover and Mouseout Event Listeners: These listen for when the mouse pointer enters and exits an element.
+            //Keydown, Keyup, and Keypress Event Listeners: These respond to keyboard-related events.
+            //Submit Event Listener: These listen for form submission events.
+            //Change Event Listener: These are used to respond to changes in the value of form elements like <input>, <select>, or <textarea>.
+            //8
+            //
+            fal('tiger');
+           var x= function (name){
+              console.log('hi');
+            }
+            
+           
+        </script>
+    </body>
+</html>

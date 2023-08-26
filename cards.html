@@ -1,0 +1,86 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <center>
+        <h1 style="color: red;">Add Contact Cards</h1>
+        <label style="color: red;">Name</label><input type="text" name="username" id="username"><br><br>
+        <label style="color: red;">Number</label><input type="number" name="mno" id="mno"><br><br>
+        <label style="color: red;">Email</label><input type="email" name="mail" id="mail"><br><br>
+        <label style="color: red;">Enter Image URL</label><input type="text" name="imgurl" id="imgurl"><br><br>
+        <button onclick="abc()" type="button" style="color: black; background-color: orange;">Add Contact</button>
+    </center>
+    <div id="dd">
+
+    </div>
+    <script>
+        var ar = [];
+        index = 0
+        var x = document.getElementById("dd")
+        function abc() {
+            var ar1 = {};
+            var username = document.getElementById("username").value
+            var mno = document.getElementById("mno").value
+            var mail = document.getElementById("mail").value
+            var imgurl = document.getElementById("imgurl").value
+            ar1.username = username
+            ar1.mno = mno
+            ar1.mail = mail
+            ar1.imgurl = imgurl
+            ar.push(ar1)
+            ghc()
+        }
+        function ghc() {
+             x.innerHTML=''
+            ar.forEach(function (value, index) {
+
+                var y = document.createElement("div")
+                y.style.width = "fit-content"
+               // y.style.height = "250px"
+                y.style.border = "1px solid"
+                y.style.boxSizing="border-box"
+                
+                
+                y.style.color = "red"
+                y.style.fontSize = "16px"
+                y.style.backgroundColor = "yellow"
+                y.style.textAlign = "center"
+                y.style.padding = "10px"
+                y.style.marginBottom = '10px'
+                var img = document.createElement("img")
+                img.src = value.imgurl
+                img.style.borderRadius = "50%"
+                img.style.width = "70px"
+                img.style.height = "70px"
+                y.appendChild(img)
+                var uname = document.createElement("p")
+                uname.innerHTML = "Name:" + value.username
+                y.appendChild(uname)
+                var phno = document.createElement("p")
+                phno.innerHTML = "Number:" + value.mno
+                y.appendChild(phno)
+                var mailid = document.createElement("p")
+                mailid.innerHTML = "Email:"  +value.mail
+                y.appendChild(mailid)
+                x.appendChild(y)
+                var c = document.createElement('button')
+                c.innerHTML = 'delete'
+                y.appendChild(c)
+                c.onclick = function () {
+                    ar.splice(index, 1);
+                    ghc()
+                }
+            })
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

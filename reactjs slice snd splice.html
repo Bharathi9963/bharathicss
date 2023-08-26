@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="dd">
+
+        </div>
+        <script>
+        let dd=document.getElementById('dd')
+        let a= React.createElement('h1',{
+            id:'bg'
+        },"welcome"
+        )
+        let f= React.createElement('p',{
+           
+        },"Hi"
+        )
+        let wrapper=React.createElement('div',{
+            
+        },
+        [a,f]
+        )
+       let b=ReactDOM.createRoot(dd)
+       b.render(wrapper)
+        </script>
+    </body>
+</html>

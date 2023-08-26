@@ -1,0 +1,137 @@
+<html>
+    <head></head>
+    <body>
+
+<button onclick="m()">Table</button>
+
+<button onclick="As()">Ascending</button>
+<button onclick="Ds()">Descending</button>
+
+<div id="d1"></div>
+    </body>
+    <script>
+        var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        }
+                        ];
+
+
+        var t=document.createElement("table")
+        t.style.border="1px solid"
+        var o=document.createElement('thead')
+        var j=document.createElement('tfoot')
+        var x=document.createElement("tr")
+        var y=document.createElement("th")
+        y.style.border="1px solid"
+        y.innerHTML="Firstname"
+        var y1=document.createElement("th")
+        y1.style.border="1px solid"
+        y1.innerHTML="Lastname"
+        var y2=document.createElement("th")
+        y2.style.border="1px solid"
+        y2.innerHTML="Age"
+        var y3=document.createElement("th")
+        y3.style.border="1px solid"
+        y3.innerHTML="Gender"
+        x.appendChild(y)
+        x.appendChild(y1)
+        x.appendChild(y2)
+        x.appendChild(y3)
+        o.appendChild(x)
+        t.appendChild(x)
+        t.appendChild(o)
+        t.appendChild(j)
+
+function m(){
+    j.innerHTML=""
+people.forEach(function(values,index){
+    
+        var x1=document.createElement("tr")
+        var z=document.createElement("td")
+        z.style.border="1px solid"
+        z.innerHTML=values.firstname
+        var z1=document.createElement("td")
+        z1.style.border="1px solid"
+        z1.innerHTML=values.lastname
+        var z2=document.createElement("td")
+        z2.style.border="1px solid"
+        z2.innerHTML=values.age
+        var z3=document.createElement("td")
+        z3.style.border="1px solid"
+        z3.innerHTML=values.gender
+
+        x1.appendChild(z)
+        x1.appendChild(z1)
+        x1.appendChild(z2)
+        x1.appendChild(z3)
+        t.appendChild(x1)
+        j.appendChild(x1)
+
+        var d=document.getElementById("d1")
+        d.appendChild(t) 
+    
+})
+
+}
+function Ds(){
+    people.sort(function(a,b){
+        if(a.firstname>b.firstname){
+            return -1;
+        }
+        if(a.firstname<b.firstname){
+            return 1;
+        }
+        return 0
+    })
+   m()
+    
+}
+
+function As(){
+    people.sort(function(a,b){
+        if(a.firstname<b.firstname){
+            return -1;
+        }
+        if(a.firstname>b.firstname){
+            return 1;
+        }
+        return 0
+    })
+   m()
+    
+}
+
+
+
+
+
+    </script>
+</html>

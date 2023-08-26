@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <div id="d8"></div>
+    <div id="d9"></div>
+    <div id="d10"></div>
+    <div id="d11"></div>
+    <div id="d12"></div>
+    <div id="d13"></div>
+    <div id="d14"></div>
+    <div id="d15"></div>
+    <div id="d16"></div>
+    <div id="d17"></div>
+
+    <script type="text/babel">
+        var X = function abc(){
+            
+            function pqr(){
+                alert("Hello Edupoly")
+            }
+            return (
+                <button onClick={pqr}>Click here to see alert</button>
+            )
+        }
+        ReactDOM.render(<X/>,document.getElementById('d1'))
+
+        var Y = function abc(){
+            
+            function pqr(){
+               console.log("Hello Edupoly")
+            }
+            return (
+                <button onClick={pqr}>Click here to see alert</button>
+            )
+        }
+        ReactDOM.render(<Y/>,document.getElementById('d2'))
+
+        var Z = function abc(){
+            function pqr(e){
+               console.log(e)
+            }
+            return (
+                <button onClick={pqr}>Click here to see alert</button>
+            )
+        }
+        ReactDOM.render(<Z/>,document.getElementById('d3'))
+
+        var A = function abc(){
+
+            function pqr(e){
+               console.log(e)
+            }
+            return (
+                <div style={{border:"2px solid",width:"300px",height:"200px"}} onClick={pqr}>Click here to see alert</div>
+            )
+        }
+        ReactDOM.render(<A/>,document.getElementById('d4'))
+
+        var B = function abc(){
+            function pqr(e){
+                console.log(e.clientX)
+                console.log(e.clientY)
+               
+            }
+            return (
+                <div style={{border:"2px solid",width:"300px",height:"200px"}} onClick={pqr}>Click here to see alert</div>
+            )
+        }
+        ReactDOM.render(<B/>,document.getElementById('d5'))
+
+        var C = function abc(){
+            function pqr(){
+                console.log("Welcome to Edupoly ReactJs")
+                
+               
+            }
+            return (
+                <div style={{border:"2px solid",width:"300px",height:"200px"}} onClick={pqr}>Welcome to Edupoly ReactJS</div>
+            )
+        }
+        ReactDOM.render(<C/>,document.getElementById('d6'))
+
+        var D = function abc(){
+            
+            function pqr(e){
+                console.log(e.target.id)
+                
+               
+            }
+            return (
+                <div style={{border:"2px solid",width:"300px",height:"200px"}} onClick={pqr} id="dd">Welcome to Edupoly ReactJS</div>
+            )
+        }
+        ReactDOM.render(<D/>,document.getElementById('d7'))
+
+        var E = function abc(){
+            
+            function pqr(){
+                console.log("Welcome to Edupoly ReactJs")
+                
+               
+            }
+            return (
+                <h1 onClick={pqr}>Welcome to Edupoly ReactJs</h1>
+            )
+        }
+        ReactDOM.render(<E/>,document.getElementById('d8'))
+
+
+        var F = function abc(){
+            
+            function pqr(e){
+                console.log(e)
+                
+               
+            }
+            return (
+                <button onClick={pqr}>Click here to see alert</button>
+            )
+        }
+        ReactDOM.render(<F/>,document.getElementById('d9'))
+        //11
+        var G = function abc(){
+           function pqr(){
+               var x=document.getElementById("inp")
+               console.log(x.value)
+              
+           }
+           return ( 
+               <div>
+               <input type="text" id="inp"/>
+               <button onClick={pqr}>Click here</button>
+               </div>
+
+                   
+           )
+       }
+       ReactDOM.render(<G/>,document.getElementById('d10'))
+       //12
+       var Y = function abc(){
+            function mno(){
+                document.getElementById('df').innerHTML = document.getElementById('dg').value
+            }
+            return (
+                <div>
+                    <input type="text" id="dg"/>
+                    <button onClick={mno}>Click here to see alert</button>
+                    <h1 id="df"></h1>
+                </div>
+                )
+        }
+        ReactDOM.render(<Y/>,document.getElementById('d11'))
+        //13
+        var Y = function abc(){
+            function mno(){
+                document.getElementById('dff').innerHTML = document.getElementById('dgg').value.toUpperCase()
+            }
+            return (
+                <div>
+                    <input type="text" id="dgg"/>
+                    <button onClick={mno}>Click here to see alert</button>
+                    <h1 id="dff"></h1>
+                </div>
+                )
+        }
+        ReactDOM.render(<Y/>,document.getElementById('d12'))
+        //14
+        var Y = function abc(){
+            function mnoo(){
+                document.getElementById('dfff').innerHTML = document.getElementById('dggg').value
+            }
+            function mn(){
+                document.getElementById('dggg').value=('');
+                document.getElementById('dfff').innerHTML=('');
+
+            }
+            return (
+                <div>
+                    <input type="text" id="dggg" onKeyUp={mnoo}/>
+                    <button onClick={mn}>Click here to see alert</button>
+                    <h1 id="dfff"></h1>
+                </div>
+                )
+        }
+        ReactDOM.render(<Y/>,document.getElementById('d13'))
+        //15
+        var Ghj=function hjk(){
+           function ogh(){
+            document.getElementById('hea').innerHTML=document.getElementById('hj').value*document.getElementById('nj').value
+             
+           
+           }
+           function hjk(){
+            document.getElementById('hea').innerHTML=document.getElementById('hj').value/document.getElementById('nj').value
+             
+           
+           }
+
+
+
+            return (
+                <div>
+                    {  
+                        <div>
+                           
+                        <input type='text' id='hj'/>
+                        <input type='text' id='nj'/>
+                        <button onClick={ogh}>Mul</button>
+                        <button onClick={hjk}>Div</button>
+                        <h1 id='hea'></h1>
+                        </div>
+                    }
+                    </div>
+            )
+        }
+        ReactDOM.render(<Ghj/>,document.getElementById('d14'))
+       //40
+       function App() {
+            var [num1, setNum1] = React.useState('');
+            var [num2, setNum2] = React.useState('');
+            var [result, setResult] = React.useState('');
+
+            const handleAddition = () => {
+                setResult(num1 - num2);
+            }
+
+
+            return (
+                <div>
+                    <input type="text" value={num1} onChange={(e) => setNum1(+e.target.value)} /><br />
+                    <input type="text" value={num2} onChange={(e) => setNum2(+e.target.value)} /><br />
+                    <button onClick={handleAddition}>Substract</button>
+                    <h1>{result}</h1>
+
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('d15'));
+     //39 
+     var Yh = function abc(){
+            function mn(){
+                document.getElementById('dj').innerHTML = document.getElementById('dgo').value
+                
+            }
+           
+
+            
+            return (
+                <div>
+                    <input type="text" id="dgo" onBlur={mn}/>
+                    <h1 id="dj"></h1>
+                </div>
+                )
+        }
+        ReactDOM.render(<Yh/>,document.getElementById('d16'))
+    //38
+    var StudentsList = function(){
+                var [selectedName, setSelectedName] = React.useState("");
+                var [selectedLastName, setSelectedLastName] = React.useState("");
+                var [selectedAge, setSelectedAge] = React.useState("");
+                var [selectedGender, setSelectedGender] = React.useState("");
+
+                var students = [
+                    {
+                        firstname: "Praveen",
+                        lastname: "Gubbala",
+                        age: 40,
+                        gender: "male",
+                    },
+                    {
+                        firstname: "Smrithi",
+                        lastname: "mandana",
+                        age: 25,
+                        gender: "female",
+                    },
+                    {
+                        firstname: "mithali",
+                        lastname: "raj",
+                        age: 39,
+                        gender: "female",
+                    },
+                    {
+                        firstname: "Rohit",
+                        lastname: "Sharma",
+                        age: 35,
+                        gender: "male",
+                    },
+                    {
+                        firstname: "Sachin",
+                        lastname: "Tendulkar",
+                        age: 50,
+                        gender: "male",
+                    },
+                ];
+
+                var handleClick = (firstname, lastname, age, gender) => {
+                    setSelectedName(firstname);
+                    setSelectedLastName(lastname);
+                    setSelectedAge(age);
+                    setSelectedGender(gender);
+                };
+
+                return (
+                    <div>
+                        <ul>
+                            {students.map((student, index) => (
+                              <li key={index} onClick={() => handleClick(student.firstname, student.lastname, student.age, student.gender)}>
+                                    {student.firstname}
+                                </li>
+                            ))}
+                        </ul>
+                        <h1>{selectedName}</h1>
+                        <h2>{selectedLastName}</h2>
+                        <h2>{selectedAge}</h2>
+                        <h2>{selectedGender}</h2>
+                    </div>
+                );
+            };
+
+            ReactDOM.render(<StudentsList />, document.getElementById('d17'));
+            //37
+            
+ 
+    
+
+   
+
+        
+
+        
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

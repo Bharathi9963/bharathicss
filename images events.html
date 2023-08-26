@@ -1,0 +1,123 @@
+<html>
+    <head>
+           
+    </head>
+    <body>
+        <div id="df">
+        <img src=""  id="dd" style="width:50%">
+         </div>
+         <br>
+         <button onclick="prev()">prev</button>
+         <button onclick="next()">next</button><br><br>
+    </body>
+
+    <script>
+        var y=document.getElementById('df')
+        y.style.border='1px solid black'
+        y.style.width='50%'
+        var x=document.querySelector('#dd')
+       
+        var ar=['https://images.mygoodtimes.in/wp-content/uploads/2019/03/25100542/Mahesh-Babu.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxSVEn8aaXRcdenWtK7ABJs6a-MWrwRFhC3A&usqp=CAU','https://images.mygoodtimes.in/wp-content/uploads/2019/03/25100542/Mahesh-Babu.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxSVEn8aaXRcdenWtK7ABJs6a-MWrwRFhC3A&usqp=CAU']
+        var i=0;
+        function next(){
+        if(i==ar.length-1){
+            i=0
+            x.src=ar[i]
+        }
+        else{
+            i++;
+            x.src=ar[i]
+        }
+       }
+       function prev(){
+        if(i===0){
+            i=ar.length-1
+            x.src=ar[i]
+        }
+        else{
+            i--
+            x.src=ar[i]
+        }
+       }
+     
+     
+       
+    
+    
+    
+    </script>
+    
+</html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <img onclick="abc(event)" src="https://www.rd.com/wp-content/uploads/2020/01/GettyImages-1131335393-e1650030686687.jpg" style="height: 20%;" >
+        <img onclick="abc(event)" src="https://t3.ftcdn.net/jpg/00/20/13/60/360_F_20136083_gk0ppzak6UdK9PcDRgPdLjcuAdo7o1LK.jpg" style="height: 20%;">
+        <img onclick="abc(event)" src="https://media.sciencephoto.com/c0/06/94/98/c0069498-800px-wm.jpg" style="height: 20%;">
+        <center><img id="a1" src=""></center>
+        <script>
+         function abc(e){
+            var x=document.getElementById("a1")
+            x.src=e.target.src
+            x.style.height="20%"
+         }
+        </script>
+    <html>
+        <head>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        </head>
+        <body>
+            
+            <i class="bi" onclick="abc(event)" id="0"></i>
+            <i class="bi" onclick="abc(event)" id="1"></i>
+            <i class="bi" onclick="abc(event)" id="2"></i>
+            <i class="bi" onclick="abc(event)" id="3"></i>
+            <i class="bi" onclick="abc(event)" id="4"></i>
+            
+           
+            
+        </body>
+        <script>
+            var x=document.getElementsByClassName('bi')
+            
+             for( var i=0;i<=x.length-1;i++){
+             x[i].classList.add('bi-star')
+             
+             }
+             function abc(e){
+                
+                for(var j=0;j<=x.length-1;j++){
+                    if(j<=e.target.id){
+                    x[j].classList.remove('bi-star')
+                    x[j].classList.add('bi-star-fill')
+                }
+                else{
+                    x[j].classList.remove('bi-star-fill')
+                    x[j].classList.add('bi-star')
+                }
+                  
+                }
+
+             }
+        
+            
+
+            
+          
+
+        </script>
+    </html>
+    <html>
+        <head>
+
+        </head>
+        <body>
+            <script>
+                
+               
+            </script>
+        </body>
+
+    </html>

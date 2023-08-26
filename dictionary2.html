@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <style></style>
+    </head>
+    <body>
+        
+        
+        <input type="text" id="dd">
+        <button onclick="abc()">Search</button><br><br>
+        <div id="ff">
+
+        </div>
+        <script> 
+           var x=document.getElementById('dd')
+           var y=document.getElementById('ff')
+           function abc(){
+            var url="https://api.dictionaryapi.dev/api/v2/entries/en"
+            var str1=x.value
+            axios.get(`${url}/${str1}`).then(function(res){
+                products=res.data
+                console.log(products)
+            products.forEach(function(s){
+                y.innerHTML=""
+                var a=document.createElement('div')
+                a.style.border="1px solid black"
+                a.style.width='fit-content'
+              
+                y.appendChild(a)
+                var b=document.createElement('h1')
+                b.innerHTML=products[0].word
+                a.appendChild(b)
+                var c=document.createElement('h3')
+                c.innerHTML=products[0].meanings[0].partOfSpeech
+                a.appendChild(c)
+                var d=document.createElement('h3')
+                d.innerHTML='Uk'
+               
+                a.appendChild(d)
+                var e=document.createElement('span')
+                e.classList.add('bi')
+                e.classList.add('bi-volume-up-fill')
+                d.appendChild(e)
+                e.onclick=function xy(w){
+                   
+                    var g=document.createElement('audio')
+                    var h=document.createElement('source')
+                    h.src= products[0].phonetics[0].audio
+                    g.appendChild(h)
+                    a.appendChild(g)
+                    g.play()
+
+                }
+                var o=document.createElement('h3')
+                o.innerHTML=products[0].phonetic
+                e.appendChild(o)
+                o.style.display='inline-block'
+                var p=document.createElement('hr')
+                a.appendChild(p)
+                p.style.color="blue"
+                var q=document.createElement('h2')
+                q.innerHTML="Meaning"
+                a.appendChild(q)
+               
+
+                var ol=document.createElement('ol')
+              
+                    var li=document.createElement('li')
+                    li.innerHTML=products[0].meanings[0].definitions[0].definition
+                    ol.appendChild(li)
+                    var li=document.createElement('li')
+                    li.innerHTML=products[0].meanings[0].definitions[1].definition
+                    ol.appendChild(li)
+                    a.appendChild(ol)
+                    var l=document.createElement('hr')
+                a.appendChild(l)
+                l.style.color="blue"
+                var k=document.createElement('h2')
+                k.innerHTML="Example"
+                a.appendChild(k)
+                var ol2=document.createElement('ol')
+              
+              var li2=document.createElement('li')
+              li2.innerHTML=products[0].meanings[0].definitions[0].example
+              ol2.appendChild(li2)
+            
+              a.appendChild(ol2)
+                
+              
+
+
+            
+                    
+                
+
+
+
+
+
+            })
+            })
+           }
+
+        </script>
+    </body>
+</html>

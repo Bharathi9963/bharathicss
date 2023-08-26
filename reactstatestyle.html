@@ -1,0 +1,152 @@
+<html>
+    <head>
+    
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="dd"></div>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+        <div id="d6"></div>
+        <div id="d7"></div>
+        <div id="d8"></div>
+        <div id="d9"></div>
+        <div id="d10"></div>
+        <div id="d11"></div>
+        <script type="text/babel">
+            //1
+            var Jhg=function(){
+
+                return(
+                <>
+                {
+                 <h1 style={{color:'green'}}>Welcome</h1>
+                }
+                </>
+
+                )
+            }
+            ReactDOM.render(<Jhg/>,document.getElementById('dd'))
+            //2
+            var Jhg=function(){
+
+return(
+<>
+{
+ <h1 style={{color:'green',backgroundColor:'red'}}>Welcome</h1>
+}
+</>
+
+)
+}
+ReactDOM.render(<Jhg/>,document.getElementById('d1'))
+//3
+var Jhg=function(){
+ var [col,setcol]=React.useState('purple')
+return(
+<>
+{
+ <h1 style={{color:col}}>Welcome</h1>
+}
+</>
+
+)
+}
+ReactDOM.render(<Jhg/>,document.getElementById('d2'))
+//4
+var Jhg=function(){
+    var [col,setcol]=React.useState(['bharathi','Reshma','Divya'])
+return(
+<div style={{display:'flex'}}>
+{
+ col.map((a)=>{
+       return <span style={{border:'1px solid',margin:'10px'}}>{a}</span>
+ })
+}
+</div>
+
+)
+}
+ReactDOM.render(<Jhg/>,document.getElementById('d3'))
+        //6
+        var Jkl = function () {
+            var [obj, setObj] = React.useState({
+                firstname: "Praveen",
+                lastname: "Gubbala",
+                age: 40
+            });
+            return (
+                <div style={{border:'1px solid'}}>
+                    <div style={{fontWeight:'bold'}}>Firstname:{obj.firstname}</div>
+                    <div>Lastname:{obj.lastname}</div>
+                    <div style={{fontStyle:'italic'}}>Age:{obj.age}</div>
+                </div>
+            )
+        }
+        ReactDOM.render(<Jkl />, document.getElementById('d4'));
+    //7
+    var Jhg=function(){
+        var [obj, setObj] = React.useState([{
+                firstname: "Praveen",
+                lastname: "Gubbala",
+                age: 40,
+                gender:'male'
+            },
+            {
+                firstname: "Bharathi",
+                lastname: "Reddy",
+                age: 22 ,
+                gender:'female'
+            }
+
+        ]);
+return(
+<div>
+{
+    <div style={{display:'flex',border:'1px solid',margin:'10px'}} >
+        {
+            obj.map((a)=>{
+               return <div style={{border:'2px solid',margin:'10px'}}>Firstname:{a.firstname}
+                    <div>Lastname:{a.lastname}</div>
+                    <div >Age:{a.age}</div>
+                    <div>Gender:{a.gender}</div>
+                    <div>{a.gender==='female'?(<img src="https://s3.ap-south-1.amazonaws.com/modelfactory.in/upload/2023/Jan/12/blog_images/e46601974389fe0cab04c746fe55c4cf.jpg"/>):(<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyQSLwaFy5qex2GuD-bZCkegtINl9fX7P9DA&usqp=CAU"/>)}</div>
+                    </div>
+
+            })
+        }
+        
+                   
+                </div>
+}
+</div>
+
+)
+}
+ReactDOM.render(<Jhg/>,document.getElementById('d5'))
+//9
+
+var Jhg=function(){
+ var [col,setcol]=React.useState(10)
+return(
+<>
+{
+ <h1 style={(col%2===0)?{color:'green'}:{color:'red'}}>Welcome</h1>
+}
+</>
+
+)
+}
+ReactDOM.render(<Jhg/>,document.getElementById('d6'))
+//10
+
+
+
+        </script>
+    </body>
+</html>

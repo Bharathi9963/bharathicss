@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+        <div id="d6"></div>
+        <div id="d7"></div>
+        <div id="d8"></div>
+
+        <script type="text/babel">
+            // 1
+            var Abc = function () {
+            var [c, setC] = React.useState(25);
+            return (
+                <div>
+                    {
+                        <h1 style={c%2==0? {color:'green'}:{color:'red'}}>{c}</h1>
+                    }
+                </div>
+            )
+        }
+        ReactDOM.render(<Abc />, document.getElementById('d1'));
+        // 2
+        var Abc = function(){
+                return(
+                    <div>
+                        {<h1 style={{border:"2 px solid black"}}>Hello Edupoly</h1>}
+                    </div>
+                )
+            }
+        ReactDOM.render(<Abc />, document.getElementById('d2'))
+        // 3
+        var Abc = function(){
+                return(
+                    <div>
+                        {<h1 style={{backgroundColor:'green',color:'purple'}}>Hello Edupoly</h1>}
+                    </div>
+                )
+            }
+        ReactDOM.render(<Abc />, document.getElementById('d3'))
+        // 4
+        var Abc = function(){
+                return(
+                    <div>
+                        <h1 style={{color:'purple'}}>Hello Edupoly</h1>
+                         <h1 style={{color:'green'}}>React Js</h1>
+                    </div>
+                )
+            }
+        ReactDOM.render(<Abc />, document.getElementById('d4'))
+        // 5
+        var Abc =function(){
+        var students = [
+        {
+        firstname:"Praveen",
+        lastname:"Gubbala",
+        gender:'male'
+        },
+        {
+        firstname:"Lohita",
+        lastname:"Sharma",
+        gender:'female'
+        },
+        {
+        firstname:"Sachin",
+        lastname:"Tendulkar",
+        gender:'male'
+        }
+        ]
+        return (
+            <>
+            <table border='2'>
+            <thead>
+                <th>firstname</th>
+                <th>Lastname</th>
+                <th>Gender</th>
+        </thead>
+        <tbody>
+            {
+            students.map((a)=>{
+                return  <tr style={(a.gender=='female')?{backgroundColor:'pink'}:{backgroundColor:'lightblue'}}><td>{a.firstname}</td><td>{a.lastname}</td><td>{a.gender}</td></tr>
+                
+            })
+            }
+        
+        </tbody>
+            </table>
+        </>
+        )
+        }
+        ReactDOM.render(<Abc />,document.getElementById('d5'))
+        // 6
+        var Abc = function(){
+        var [x,setX]=React.useState('Edupoly')
+            return(
+                <div>
+                    {<h1 style={x.length%2==0?{color:'red'}:{color:'blue'}}>{x}</h1>}
+                </div>
+        )
+        }
+        ReactDOM.render(<Abc />, document.getElementById('d6'))
+        // 7
+        var Abc = function(){
+        var [x,setX]=React.useState(100)
+            return(
+                <div>
+                    {<h1 style={x>=0?{color:'green'}:{color:'red'}}>{x}</h1>}
+                </div>
+        )
+        }
+        ReactDOM.render(<Abc />, document.getElementById('d7'))
+        // 8
+        var Abc = function(){
+        var [x,setX]=React.useState(24)
+            return(
+                <div>
+                    {<h1 style={x%2==0?{backgroundColor:'green'}:{backgroundColor:'red'}}>{x}</h1>}
+                </div>
+        )
+        }
+        ReactDOM.render(<Abc />, document.getElementById('d8'))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,203 @@
+<html>
+    <head>
+        <style>
+            #a{
+                width:'10%'
+            }
+            #b{
+                width:'10%'
+            }
+            #c{
+                width:'10%'
+            }
+            #l{
+                display:inline-block;
+            }
+            #m{
+                display:inline-block;
+            }
+           
+
+            
+        </style>
+    </head>
+    <body >
+        <div id="dd" onclick="v()">
+
+        </div><br>
+        <button onclick="b()" id="df">Toggle</button>
+        <span id="ff"></span><br><br>
+        <button onclick="a()" id="gf">On</button>
+        <button onclick="d()">Like</button>
+        <span id="b"></span>
+        <button onclick="f()">Dislike</button>
+        <span id="d"></span>
+        <div id="resh">
+
+        </div>
+        <button onclick=" k()">Toggle</button><br>
+        <br>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtwTvRBq8Uu4Wx32KNag3Z6a8SkoM4Fg5j2A&usqp=CAU" onmouseover="bc()" id="a" >
+
+        
+
+
+       
+        <div id="bo" onmouseleave="cb()">
+           
+        </div><br><br>
+        <div id="ee">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtwTvRBq8Uu4Wx32KNag3Z6a8SkoM4Fg5j2A&usqp=CAU"  id="img" ><br>
+         </div>
+        <button id="l" onclick="s(event)">prev</button>
+        <button id="m" onclick="t()">next</button>
+        
+        
+        
+        
+        
+
+    </body>
+    <script>
+        //4
+        var o=document.getElementById('dd')
+        o.style.border='1px solid black'
+        o.style.width='10%'
+        o.style.height='10%'
+        i=0
+        var ar=['red','yellow','green','blue']
+
+        function v(){
+            if(i==ar.length-1){
+                i=0;
+            }
+            else{
+                o.style.backgroundColor=ar[i]
+                i++
+            }
+            
+
+        }
+        //5
+        var y=document.getElementById('df')
+        y.style.backgroundColor='yellow'
+        x=false
+        var z=document.getElementById('ff')
+            z.innerHTML=x
+    
+        
+        function b(){
+           x=!x
+           
+           
+                z.innerHTML=x
+                
+           
+        }
+        //6
+        function a(){
+            var y=document.getElementById('gf')
+           
+            if(y.innerHTML==='On'){
+                y.innerHTML='off'
+            }
+            else{
+                y.innerHTML='On'
+        }
+            
+        }
+        //7
+        count=0
+        sum=0
+        var n=document.getElementById('b')
+        n.innerHTML=count
+        var m=document.getElementById('d')
+        m.innerHTML=sum
+        function d(){
+           count++
+           n.innerHTML=count
+        }
+        
+        function f(){
+           sum++
+           m.innerHTML=count
+        }
+        //9
+        var r=document.getElementById('resh')
+        r.style.border='1px solid black'
+        r.style.width='10%'
+        r.style.height='10%'
+        r.style.backgroundColor='white'
+        function k(){
+           
+            if(r.style.backgroundColor==='white'){
+                r.style.backgroundColor='yellow'
+            }
+            else if(r.style.backgroundColor==='yellow'){
+                r.style.backgroundColor='white'
+            }
+            
+
+        }
+        //11
+       // var img=document.createElement('img')
+      
+       // img.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtwTvRBq8Uu4Wx32KNag3Z6a8SkoM4Fg5j2A&usqp=CAU'
+       // var f=document.getElementById('fg')
+        //f.appendChild(img)
+
+       var j=document.getElementById('bo')
+       j.style.border='1px solid black'
+       j.style.width='50%'
+       j.style.height='50%'
+       var i=document.getElementById('a')
+       
+      
+
+
+       function bc(e){
+           
+                j.append(i)
+             
+            
+            
+       }
+       function cb(e){
+        i.style.display='none'
+       }
+       //12
+       //image carasol
+       var e=document.getElementById('ee')
+       e.style.border='1px solid black'
+       e.style.width='30%'
+       i=0
+       ar=['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtwTvRBq8Uu4Wx32KNag3Z6a8SkoM4Fg5j2A&usqp=CAU','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZbLy8dxD2ZxEA9S1qqEg_hQwFCUVY3TfeJQ&usqp=CAU','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaewSD3FvZekzLYNx2_pfCW2Q8fbnxfQTTsw&usqp=CAU']
+       
+
+       function s(e){
+        e.style.display='none'
+         
+        var n=document.getElementById('img')
+          n.style.display='block'
+       }
+       function t(){
+          
+          var q=forEach(function(value){
+            var f=document.createElement('img')
+            f.src=value
+            e.append(f)
+          })
+         
+          
+       }
+
+
+       
+
+       
+
+
+
+
+    </script>
+</html>

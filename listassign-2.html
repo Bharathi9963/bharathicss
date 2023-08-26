@@ -1,0 +1,145 @@
+<html>
+    <head> 
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    </head>
+
+    <body>
+         <input type="text" onkeyup="au()" id="fd">
+        <button onclick="abc()">Products</button>
+       
+
+        <button onclick="As()" >Ascending</button>
+        <button onclick="Ds()">Descending</button>
+
+        <ul id="dd">
+            
+        </ul>
+        <table id="tb" style="border:1px solid">
+            <thead id="tw"></thead>
+            <tfoot id="tf"></tfoot>
+        </table>
+        <script>
+            var n=document.getElementById('fd')
+         
+           var d=document.getElementById('dd')
+           var bt=document.getElementById('tb')
+        
+            function abc(){
+                axios.get("https://jsonplaceholder.typicode.com/users").then(function(res){
+                    console.log(res)
+                    var products=res.data
+                    
+                function genUi(z){
+                    d.innerHTML=""
+                  
+                    products.forEach(function(value,index){
+                       var c=document.createElement('li')
+                       c.innerHTML=value.name
+                       
+                       d.appendChild(c)
+                      
+                    })
+                }
+                genUi()
+                })
+                   
+                
+            
+
+            }
+
+
+            function As(){
+                axios.get("https://jsonplaceholder.typicode.com/users").then(function(res){
+                    var products=res.data
+                    products.sort(function(a,b){
+                       if(a.name<b.name){
+                        return -1
+                       }
+                       if(a.name>b.name){
+                        return 1
+                       }
+                       return 0
+                    })
+                    d.innerHTML=''
+                    bt.style.display='none'
+                   
+                    products.forEach(function(value,index){
+                       var c=document.createElement('li')
+                       c.innerHTML=value.name
+                       
+                       d.appendChild(c)
+                      
+                    })
+
+                })
+                
+
+             // genUi()
+             }
+            
+
+
+             function Ds(){
+                axios.get("https://jsonplaceholder.typicode.com/users").then(function(res){
+                    var products=res.data
+                    products.sort(function(a,b){
+                       if(a.name>b.name){
+                        return -1
+                       }
+                       if(a.name<b.name){
+                        return 1
+                       }
+                       return 0
+                    })
+                    d.innerHTML=""
+                    bt.style.display='none'
+                   
+                    products.forEach(function(value,index){
+                       var c=document.createElement('li')
+                       c.innerHTML=value.name
+                      
+                       d.appendChild(c)
+                      
+                    })
+
+                })
+                
+
+             // genUi()
+             }
+
+
+                    
+
+             
+             
+            
+             
+          function au(){
+            axios.get("https://jsonplaceholder.typicode.com/users").then(function(res){
+                var products=res.data
+               var m= products.filter(function(value,i){
+                return(value.name.toLowerCase().startsWith(n.value.toLowerCase()))
+               })
+              
+              d.innerHTML=""
+              bt.style.display='none'
+              m.forEach(function(value,index){
+                       var c=document.createElement('li')
+                       c.innerHTML=value.name
+                      
+                       d.appendChild(c)
+                      
+                    })
+          })
+   }
+             
+           
+
+          
+           
+        </script>
+    </body>
+
+</html>

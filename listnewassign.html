@@ -1,0 +1,104 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+      <input type="text" id="d2" onkeyup="abc()">
+     
+      <!--<button onclick="abc()">add student</button>-->
+        <ul id="dd">
+           
+        </ul> 
+
+        <script>
+      
+
+      
+       /* ar=['bharathi','divya','reshma','harshitha','sharmila']
+
+
+
+      var y=document.getElementById('dd')
+      function genUI(){
+        y.innerHTML=''
+        ar.forEach(function(a,i){
+         var x=document.createElement('li')
+          x.innerHTML=a
+         var c=document.createElement('button')
+          c.innerHTML='delete'
+          x.appendChild(c)
+          c.onclick=function(){
+            ar.splice(i,1);
+            genUI() 
+          }
+          y.appendChild(x)
+
+        })
+    }
+    genUI()*/
+    
+    var x=document.getElementById('d2')
+    var y=document.getElementById('dd')
+    ar=['apple','mango','banana','cherry']
+    ar.forEach(function(value,index){
+            
+           
+            var b=document.createElement('li')
+            b.innerHTML=value
+            y.appendChild(b)
+})
+
+    
+    function abc(){
+          var n=ar.filter(function(a,i){
+            return(a.startsWith(x.value))  
+        }) 
+        ghc(n)
+    }
+
+    function ghc(z){
+      y.innerHTML=""
+      z.forEach(function(v,i){
+      var b=document.createElement('li')
+      b.innerHTML=v
+      y.appendChild(b)
+      })
+    }
+    
+   
+   
+
+   /* ar=[]
+    function abc(){
+     ar.push(x.value)
+      ghc()
+    }
+
+
+      function ghc(){
+        y.innerHTML=''
+        ar.forEach(function(a,i){
+            ar2.forEach(function(v,index){
+                
+                    var x=document.createElement('li')
+                    x.innerHTML=value
+                    var c=document.createElement('button')
+                    c.innerHTML='delete'
+                    x.appendChild(c)
+                    c.onclick=function(){
+                        ar.splice(i,1);
+                        ghc() 
+                    }
+                    y.appendChild(x)
+
+                
+            })
+        
+        })
+    }
+    ghc()*/
+
+ 
+        </script>
+    </body>
+</html>

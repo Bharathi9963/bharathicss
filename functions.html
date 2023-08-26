@@ -1,0 +1,82 @@
+<html>
+    <head> </head>
+    <body>
+        <script>
+            //1.
+            function add(a,b){
+                return a+b;
+            }
+            var sum = add(45,67);
+                console.log(sum);
+        //2.
+            function compare(a,b,c){
+                return (a>b)?((a>c)?a:c):((b>c)?b:c) 
+                            }
+                            var greatest = compare(45,67,23);
+                            console.log(greatest);
+        //3
+        function sortNums(a,b,c){
+                            if(a<b && a<c){
+                                if(b<c){
+                                    return {a,b,c}
+                                }
+                                else{
+                                    return {a,c,b}
+                                }
+                                
+                            }
+                            else if(b<a && b<c)
+                            {
+                                if(a<c){
+                                    return {b,a,c}
+                                }
+                                else{
+                                    return {b,c,a}
+                                }     
+                               
+                            }
+                            else if(c<a && c<b)
+                            {
+
+                                if(b<a){
+                                    return {c,b,a}
+                                }
+                                else{
+                                    return {c,a,b}
+                                }
+                                
+                                
+                            }
+                            }
+
+                            var ascending = sortNums(45,7,68);
+                            console.log(ascending);
+        //4.
+        function fact(a){
+                    var s=1;
+                    for(a=1;a<=5;a++)
+                    {
+                        s=s*a;
+
+                    }return s
+                            }
+                            var factorial = fact(5);
+                            console.log(factorial);  
+        //5.
+            function rev(a){
+                var a=4536;
+                var s=0;
+                while(a>0){
+                    var r=a%10;
+                    s=s*10+r;
+                    a=parseInt(a/10);
+                }
+                return(s)
+                            }
+                            var reverse = rev(4);
+                            console.log(reverse);
+
+        </script>
+    </body>
+    
+</html>

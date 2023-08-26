@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+</head>
+</head>
+
+<body>
+   
+    <button onclick="abc()">click me</button>
+    <input type="text"id=dd>
+    <div id="main"></div>
+    <script>
+        var inp = document.getElementById('dd')
+        var main = document.getElementById('main')
+        var url = "https://www.themealdb.com/api/json/v1/1/categories.php"
+        // 1/categories.php
+        
+            main.innerHTML=""
+            axios.get(`${url}`).then(function (res) {
+                var meal = res.data
+                console.dir(meal)
+               
+               meal.categories.forEach(function(a,b){
+              
+                var but=document.createElement('li')
+                but.innerHTML=a.strCategory
+                but.style.marginLeft='10px'
+                but.style.marginTop='10px'
+                main.appendChild(but)
+                
+               })
+               
+         
+            })
+            var url='https://www.themealdb.com/api/json/v1/1/filter.php?c='
+            function abc(){
+               
+            
+                main.innerHTML=""
+                main.setAttribute("class","d-flex flex-wrap mx-auto")
+                axios.get(`${url}${inp.value}`)
+                .then(function(res){
+                    var food=res.data
+                    console.log(food)
+
+                    food.meals.forEach(function(value){
+                    var card=document.createElement("div")
+                    card.setAttribute("class","card  w-25 mx-5 my-5")
+                    var image=document.createElement("img")
+                    image.src=value.strMealThumb
+                   // image.style.width="100px"
+                    card.appendChild(image)
+                    
+
+                    var foodname = document.createElement("h4")
+                    foodname.setAttribute("class","card-body text-center mx-auto")
+                    foodname.innerHTML=value.strMeal
+                    card.appendChild(foodname)
+
+                    var categ=document.createElement("h6")
+                    categ.innerHTML=`Category:${inp.value}`
+                    categ.setAttribute("class","text-center mx-auto")
+                    card.appendChild(categ)
+                    main.appendChild(card)
+                    })
+    
+               })
+            }
+           
+        
+        
+        
+    </script>
+</body>
+
+</html>

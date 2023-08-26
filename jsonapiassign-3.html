@@ -1,0 +1,231 @@
+<html>
+    <head> 
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    </head>
+
+    <body>
+         <input type="text" onkeyup="au()" id="fd">
+        <button onclick="abc()">Products</button>
+        <button onclick="tbs()">Table</button>
+
+        <button onclick="As()" >Ascending</button>
+        <button onclick="Ds()">Descending</button>
+
+        <ul id="dd">
+            
+        </ul>
+        <table id="tb" style="border:1px solid">
+            <thead id="tw"></thead>
+            <tfoot id="tf"></tfoot>
+        </table>
+        <script>
+            var n=document.getElementById('fd')
+         
+           var d=document.getElementById('dd')
+           var bt=document.getElementById('tb')
+        
+            function abc(){
+                axios.get("https://jsonplaceholder.typicode.com/photos").then(function(res){
+                    console.log(res)
+                    var products=res.data
+                    
+                function genUi(z){
+                    d.innerHTML=""
+                  
+                    products.forEach(function(value,index){
+                       var c=document.createElement('li')
+                       c.innerHTML=value.title
+                       c.style.display='inline-block'
+                       c.style.padding="20px"
+                       c.style.textAlign='center'
+                       c.style.border='2px solid black'
+                       c.style.margin='10px'
+                       d.appendChild(c)
+                       var im=document.createElement('img')
+                       im.src=value.url
+                       im.style.width='200px'
+                       im.style.height='100px'
+                       im.style.display='flex'
+                       im.style.flexWrap="wrap"
+                       c.appendChild(im)
+                    })
+                }
+                genUi()
+                })
+                   
+                
+            
+
+            }
+
+
+            function As(){
+                axios.get("https://jsonplaceholder.typicode.com/photos").then(function(res){
+                    var products=res.data
+                    products.sort(function(a,b){
+                       if(a.title<b.title){
+                        return -1
+                       }
+                       if(a.title>b.title){
+                        return 1
+                       }
+                       return 0
+                    })
+                    d.innerHTML=''
+                    bt.style.display='none'
+                   
+                    products.forEach(function(value,index){
+                      
+                       var c=document.createElement('li')
+                       c.innerHTML=value.title
+                       c.style.display='inline-block'
+                       c.style.padding="20px"
+                       c.style.textAlign='center'
+                       c.style.border='2px solid black'
+                       c.style.margin='10px'
+                       d.appendChild(c)
+                       var im=document.createElement('img')
+                       im.src=value.url
+                       im.style.width='200px'
+                       im.style.height='100px'
+                       im.style.display='flex'
+                       im.style.flexWrap="wrap"
+                       c.appendChild(im)
+                    })
+
+                })
+                
+
+             // genUi()
+             }
+            
+
+
+             function Ds(){
+                axios.get("https://jsonplaceholder.typicode.com/photos").then(function(res){
+                    var products=res.data
+                    products.sort(function(a,b){
+                       if(a.title>b.title){
+                        return -1
+                       }
+                       if(a.title<b.title){
+                        return 1
+                       }
+                       return 0
+                    })
+                    d.innerHTML=""
+                    bt.style.display='none'
+                   
+                    products.forEach(function(value,index){
+                      
+                       var c=document.createElement('li')
+                       c.innerHTML=value.title
+                       c.style.display='inline-block'
+                       c.style.padding="20px"
+                       c.style.textAlign='center'
+                       c.style.border='2px solid black'
+                       c.style.margin='10px'
+                       d.appendChild(c)
+                       var im=document.createElement('img')
+                       im.src=value.url
+                       im.style.width='200px'
+                       im.style.height='100px'
+                       im.style.display='flex'
+                       im.style.flexWrap="wrap"
+                       c.appendChild(im)
+                    })
+
+                })
+                
+
+             // genUi()
+             }
+
+
+
+             var tab=document.getElementById('tf')
+             var t=document.getElementById('tw')
+             var rt=document.createElement('tr')
+                    var th=document.createElement('th')
+                    th.innerHTML='Title'
+                    th.style.border='1px solid black'
+                    rt.appendChild(th)
+                    var et=document.createElement('th')
+                    et.innerHTML='picture'
+                    et.style.border='1px solid black'
+                    rt.appendChild(et)
+                    var ft=document.createElement('th')
+                    ft.innerHTML="albumid"
+                    ft.style.border='1px solid black'
+                    rt.appendChild(ft)
+                    
+                    t.appendChild(rt)
+                    
+
+             
+             
+             function tbs(){
+                axios.get("https://jsonplaceholder.typicode.com/photos").then(function(res){
+                    var products=res.data
+                 d.innerHTML=""
+                
+                  products.forEach(function(value,index){
+                    var tr=document.createElement('tr')
+                    var td=document.createElement('td')
+                    td.innerHTML=value.title
+                    td.style.border='1px solid black'
+                    tr.appendChild(td)
+                    var te=document.createElement('img')
+                    te.src=value.url
+                    te.style.border='1px solid black'
+                    te.style.width="100px"
+                    im.style.flexWrap="wrap"
+                    tr.appendChild(te)
+                    
+                    var tg=document.createElement('td')
+                    tg.innerHTML=value.albumId
+                    tg.style.border='1px solid black'
+                    tr.appendChild(tg)
+                    tab.appendChild(tr)
+                
+                  })
+             })
+             }
+             
+          function au(){
+            axios.get("https://jsonplaceholder.typicode.com/photos").then(function(res){
+                var products=res.data
+               var m= products.filter(function(value,i){
+                return(value.title.toLowerCase().startsWith(n.value.toLowerCase()))
+               })
+              
+              d.innerHTML=""
+              bt.style.display='none'
+               m.forEach(function(value,index){
+                       var c=document.createElement('li')
+                       c.innerHTML=value.title
+                       c.style.display='inline-block'
+                       c.style.padding="20px"
+                       c.style.textAlign='center'
+                       c.style.border='2px solid black'
+                       c.style.margin='10px'
+                       d.appendChild(c)
+                       var im=document.createElement('img')
+                       im.src=value.url
+                       im.style.width='200px'
+                       im.style.height='100px'
+                       im.style.display='flex'
+                       im.style.flexWrap="wrap"
+                       c.appendChild(im)
+                    })
+          })
+   }
+             
+           
+
+          
+           
+        </script>
+    </body>
+
+</html>

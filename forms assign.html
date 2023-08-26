@@ -1,0 +1,120 @@
+<html>
+
+<head></head>
+
+<body>
+
+    Name:<input type="text" id="d1"><br><br>
+    Age:<input type="text" id="d2"><br><br>
+    <b>Gender:</b>
+    <input type="radio" name="gen" value="female" onchange="getgender(event)">:Female
+    <input type="radio" name="gen" value="male" onchange="getgender(event)">:Male
+    <input type="radio" name="gen" vale="others" onchange="getgender(event)">:Others
+    <br>
+    <button onclick="abc(event)">submit</button><br>
+    <table border='1px solid black'>
+        <thead >
+         <tr>
+            <th >Name</th>
+            <th>Age</th>
+            <th >Gender</th>
+            <th >Action</th>
+        </tr>
+        </thead>
+        <tbody id="dg">
+
+        </tbody>
+    </table>
+    
+    <script>
+        var n=document.getElementById('dg')
+
+        var gender;
+        var ar = []
+
+        function getgender(e) {
+            gender = e.target.value;
+        }
+
+        function abc(e) {
+            
+            n.innerHTML=""
+            var student = {
+                Name: "",
+                Age: "",
+                Gender: "",
+
+
+            }
+            student.Name = document.getElementById('d1').value
+            student.Age = document.getElementById('d2').value
+            student.Gender = gender;
+            ar.push(student)
+           
+            console.log(ar)
+            ghc()
+        }
+        function ghc(){
+            n.innerHTML=""
+
+            ar.forEach(function (value, i){
+                var x = document.createElement('tr')
+                var y = document.createElement('td')
+                y.style.border = "1px solid black"
+                y.innerHTML = value.Name
+                var z = document.createElement('td')
+                z.style.border = "1px solid black"
+                z.innerHTML = value.Age
+
+                var w = document.createElement('td')
+                w.style.border = "1px solid black"
+                w.innerHTML = value.Gender
+
+                var l = document.createElement('td')
+                l.style.border = "1px solid black"
+
+                var b = document.createElement('button')
+                b.innerHTML = 'delete'
+                x.appendChild(y)
+                x.appendChild(z)
+                x.appendChild(w)
+                l.appendChild(b)
+                x.appendChild(l)
+                n.appendChild(x)
+                b.onclick=function(){
+              ar.splice(i,1);
+              ghc() 
+          }
+           
+            })
+               
+        }
+        
+    
+    
+
+
+        
+
+
+    
+    
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
