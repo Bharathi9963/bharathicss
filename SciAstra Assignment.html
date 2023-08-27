@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        </head>
+    <body>
+        
+       <center><div style="font-size: 45px; border: 1px solid;">Team Page</div></center>
+       <center><h2>Learn from Scientists,research scholars from the top institutes in the world</h2></center>
+       <div>
+       <ul id="dd" style="display:flex ;flex-wrap: wrap;list-style: none;justify-content: space-around">
+            
+       </ul>
+       </div>
+       <center><div style="font-size: 45px; border: 1px solid;">Meet your Mentors</div></center>
+       <br>
+       <div style="display: flex;justify-content: space-around;">
+       <div class="row" style="border: 1px solid;width:30%">
+        <div class="column">
+          <div class="card">
+           <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfDVMjjddNEWTZpJY-gg7oJOEd7fL4ONUUOQ&usqp=CAU" alt="Jane" style="width:30%;border: 1px solid;border-radius: 50%;"></center>
+            <div class="container">
+              <center><h2>Jane Doe</h2></center>
+              <h3>Kharkiv National University</h3>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="border: 1px solid;width:30%">     
+  <div class="column">
+    <div class="card">
+     <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxNfBAODtC1TnVhQTmwM6eqtypB_6MvGw4Yg&usqp=CAU" alt="Mike" style="width:30%;border: 1px solid;border-radius: 50%;"></center>
+      <div class="container">
+       <center><h2>Mike Ross</h2></center>
+       <h3>Universidad Técnica Federico Santa María</h3>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="row" style="border: 1px solid;width:30%">
+  <div class="column">
+    <div class="card">
+      <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAjU1VoqEcWBAdM9IstqejHlMsXzmWU8SphA&usqp=CAU" alt="Mike" style="width:30%;border: 1px solid;border-radius: 50%;"></center>
+      <div class="container">
+      <center><h2>John Doe</h2></center>
+      <h3>IÉSEG School of Management</h3>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+        <script>
+            
+                var x=document.getElementById('dd')
+                var g=document.getElementById('dh')
+                    
+                axios.get("https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json").then(function(res){
+                    var products=res.data;
+                    console.log(products)
+                    function genUi(z){
+                    x.innerHTML=""
+                    products.forEach(function(product){
+                        
+                        var y=document.createElement('li')
+                        y.innerHTML=product.name
+                        x.appendChild(y)
+                      
+                        // y.style.display="inline-block"
+                        y.style.padding="20px"
+                        y.style.marginLeft="10px"
+                        y.style.border="1px solid"
+                        y.style.marginBottom="10px"
+                        y.style.width="200px"
+
+                     
+                })
+            }
+            genUi();
+                })
+            
+            
+
+            
+        </script>
+    </body>
+</html>
