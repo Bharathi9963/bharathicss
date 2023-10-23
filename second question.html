@@ -1,0 +1,36 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="styles.css">
+       
+    </head>
+    <body>
+        
+
+    </body>
+    <script >
+        //2A
+        function reverseWords(sentence) {
+    const words = sentence.split(' ');
+    const reversedWords = words.map(word => word.split('').reverse().join(''));
+    const reversedSentence = reversedWords.join(' ');
+    return reversedSentence;
+}
+
+const inputSentence = "This is a sunny day";
+const reversedSentence = reverseWords(inputSentence);
+console.log(reversedSentence); // Output: "shiT si a ynnus yad"
+//2B
+function sortDescending(arr) {
+    arr.sort((a, b) => b - a);
+    return arr;
+}
+
+const inputArray = [5, 2, 9, 1, 5, 8];
+const sortedArray = sortDescending(inputArray);
+console.log(sortedArray); // Output: [9, 8, 5, 5, 2, 1]
+
+ </script>
+    
+
+</html>
